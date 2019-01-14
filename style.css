@@ -1,0 +1,10 @@
+body {
+	font-family: roboto;
+	word-spacing: 2px;
+}
+
+footer {
+  text-align: center;
+  background-color: #2e3131;
+  color: #eeeeee;
+}
