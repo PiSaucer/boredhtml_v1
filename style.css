@@ -8,3 +8,15 @@ footer {
   background-color: #2e3131;
   color: #eeeeee;
 }
+
+h1 {
+  text-align: center;
+}
+
+.logo {
+  float: left;
+}
+
+img {
+  display: inline-block;
+}
