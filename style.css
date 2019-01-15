@@ -20,3 +20,8 @@ h1 {
 img {
   display: inline-block;
 }
+
+email_footer {
+  text-decoration : none;
+  color: #eeeeee;
+}
