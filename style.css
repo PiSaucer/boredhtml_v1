@@ -25,3 +25,7 @@ email_footer {
   text-decoration : none;
   color: #eeeeee;
 }
+
+pre {
+  text-align: left;
+}
