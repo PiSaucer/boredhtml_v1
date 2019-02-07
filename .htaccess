@@ -14,7 +14,7 @@ Order Deny,Allow
 Deny from All
 </Files>
 
-<Files *.swf>
+<Files *.backup>
 Order Deny,Allow
 Deny from All
 </Files>
