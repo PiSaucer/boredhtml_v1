@@ -3,7 +3,7 @@ ErrorDocument 404 /404.html
 
 # Block includes if they have a .php extension. Change
 # that to match whatever extension you use for your includes.
-<Files *.php>
+<Files *.phpss>
 Order Deny,Allow
 Deny from All
 </Files>
