@@ -24,4 +24,6 @@ ErrorDocument 403 /403.html
 
 
 #Remove file ext
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
