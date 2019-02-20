@@ -21,3 +21,10 @@ Deny from All
 
 # Create a custom page for all 403 errors
 ErrorDocument 403 /403.html
+
+
+#Remove file ext
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
