@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Tomo';
+  src: url('Tomo/Tomo.eot');
+  src: url('Tomo/Tomo.eot?#iefix') format('embedded-opentype'),
+       url('Tomo/Tomo.woff2') format('woff2'),
+       url('Tomo/Tomo.woff') format('woff'),
+       url('Tomo/Tomo.ttf') format('truetype'),
+       url('Tomo/Tomo.svg#tomoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
