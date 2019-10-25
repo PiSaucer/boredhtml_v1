@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 
+## [unreleased] [VER 0.15.1-PRE-ALPHA] - 2019-10-24
+
+
+### Added
+
+- Add search bars
+
+
 ## [unreleased] [VER 0.15.0-PRE-ALPHA] - 2019-10-24
 
 
