@@ -31,3 +31,12 @@ email_footer {
 pre {
   text-align: left;
 }
+
+footer{
+    height: 190px;
+}
+
+.dir{
+	text-align: left;
+	padding-left: 10px;
+}
