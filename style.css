@@ -2,12 +2,16 @@
 body {
 	font-family: roboto;
 	word-spacing: 2px;
+	margin-left: 50px !important;
 }
 footer {
   text-align: center;
   background-color: #2e3131;
   color: #eeeeee;
 	height: 250px;
+	margin-left: -50px !important;
+	margin-bottom: -50px !important;
+	margin-left: -50px !important;
 }
 h1 {
   text-align: center;
