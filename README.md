@@ -18,7 +18,7 @@ What I am Using:
 - Chrome 83.0.4103.97 (Official Build) (64-bit
 - Python 3.8
 - PHP 7.X.X
-- js bulit-in with Chrome
+- js build-in with Chrome
 - node.js v12.17.0
 
 ### Installing
@@ -98,7 +98,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - **[PiSaucer](https://github.com/PiSaucer)** - *Initial work*
 - **[50izac02](https://github.com/50izac02)** - Starting to help
 
-See also the list of other [contributors](...contributors) who participated in this project.
+See also the list of other [contributors](https://github.com/PiSaucer/boredhtml/contributors) who participated in this project.
 
 
 ## License
