@@ -19,6 +19,7 @@ What I am Using:
 - Python 3.8
 - PHP 7.X.X
 - js bulit-in with Chrome
+- node.js v12.17.0
 
 ### Installing
 
