@@ -3,13 +3,14 @@
 body {
 	font-family: roboto;
 	word-spacing: 2px;
+	color: white;
+	background-color: black;
 }
 
 footer {
   text-align: center;
   background-color: #2e3131;
   color: #eeeeee;
-	height: 250px;
 }
 
 h1 {
@@ -31,6 +32,10 @@ email_footer {
 
 pre {
   text-align: left;
+}
+
+footer{
+    height: 250px;
 }
 
 .dir{
