@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Bored In School Right Now Inc HTML
 
 ![version name](https://img.shields.io/badge/version-VER%200.17.2--PRE--ALPHA-blue)
