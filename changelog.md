@@ -11,6 +11,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [unreleased] [VER 0.17.3-PRE-ALPHA] - 2020-06-08
+
+
+### Added
+- YouTube method 8
+- Youtube Main
+
+
+### Working on
+- going to add "dir" to each game for easy use
+- getting things done
+
+### Fixed
+- all the youtube links
+
 
 ## [unreleased] [VER 0.17.2-PRE-ALPHA] - 2020-02-06
 
@@ -19,7 +34,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Updated
 - Added Download Button:
 <a href="file_name.swf" download class="btn" >Download</a>
-- Run 3 
+- Run 3
 - Run 2
 - Run
 
