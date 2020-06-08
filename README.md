@@ -1,6 +1,6 @@
 # Bored In School Right Now Inc HTML
 
-![version name](https://img.shields.io/badge/version-VER%200.17.1--PRE--ALPHA-blue)
+![version name](https://img.shields.io/badge/version-VER%200.17.2--PRE--ALPHA-blue)
 
 ## Getting Started
 
@@ -11,17 +11,20 @@ What things you need to run the software:
 - Python 3.X.X
 - PHP
 - js
+- node.js
 
 What I am Using:
 
-- Chrome 79.0.3945.79 (Official Build) (64-bit)
-- Python 3.7
+- Chrome 83.0.4103.97 (Official Build) (64-bit
+- Python 3.8
 - PHP 7.X.X
 - js bulit-in with Chrome
 
 ### Installing
 
-Step 1: Go to [Clone or download](https://download)
+#### first way of installing with python - not recommend
+
+Step 1: Go to [Clone or download](https://github.com/PiSaucer/boredhtml/archive/master.zip)
 
 Step 2: Unzip the file
 
@@ -48,17 +51,51 @@ Step 10: You're Done!!!
 
 (optional) Step 11: Run this on a server with python and php enable to show to the whole world
 
+#### new better way of Installing
+
+Step 1: Go to [Clone or download](https://github.com/PiSaucer/boredhtml/archive/master.zip)
+
+Step 2: Unzip the file
+
+Step 3: Keep note where you unzipped at (the directory)
+
+Step 4: Open your Command Prompt or Terminal
+
+Step 5: Go to your directory (where you unzip the files)
+
+Step 6: Type this in the Command Prompt or Terminal
+
+```
+$ npm install http-server -g
+```
+
+```
+http-server
+```
+
+Step 8: Go to your localhost:8080
+
+Step 9: It should start loading
+
+Step 10: You're Done!!!
+
+
+## Version
+- VER 0.17.2-PRE-ALPHA
+
 ## Built With
 - Atom
 - Notepad++
+- node.js
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](XXXX.CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
-- * **[PiSaucer](https://github.com/PiSaucer)** - *Initial work*
+- **[PiSaucer](https://github.com/PiSaucer)** - *Initial work*
+- **[50izac02](https://github.com/50izac02)** - Starting to help
 
 See also the list of other [contributors](...contributors) who participated in this project.
 
@@ -69,4 +106,4 @@ MIT
 
 ## Acknowledgments
 
-- From 
+- From

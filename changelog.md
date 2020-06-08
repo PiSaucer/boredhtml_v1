@@ -11,6 +11,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+
+## [unreleased] [VER 0.17.2-PRE-ALPHA] - 2020-02-06
+
+### Added
+
+### Updated
+- Added Download Button:
+<a href="file_name.swf" download class="btn" >Download</a>
+- Run 3 
+- Run 2
+- Run
+
+
+### Working On
+- Making download buttons to the games
+
 ## [unreleased] [VER 0.17.2-PRE-ALPHA] - 2020-01-23
 
 
