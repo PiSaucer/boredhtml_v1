@@ -18,8 +18,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - YouTube method 8
 - Youtube Main
 - Youtube dir
+- youtube meta tags
 - all the notepad files are also hosted locally
 - notepad dir
+- notepad meta tags
 
 
 ### Working on
