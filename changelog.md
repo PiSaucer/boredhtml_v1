@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - all the notepad files are also hosted locally
 - notepad dir
 - notepad meta tags
+- there is no game audio
 
 
 ### Working on
@@ -34,6 +35,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - all the youtube images
 - all the youtube css
 - Template
+- the errors of there is no game
 
 
 ## [unreleased] [VER 0.17.2-PRE-ALPHA] - 2020-02-06
