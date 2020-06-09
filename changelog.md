@@ -17,14 +17,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - YouTube method 8
 - Youtube Main
+- Youtube dir
+- all the notepad files are also hosted locally
+- notepad dir
 
 
 ### Working on
 - going to add "dir" to each game for easy use
+- and-ing meta tags
 - getting things done
 
 ### Fixed
 - all the youtube links
+- all the youtube images
+- all the youtube css
+- Template
 
 
 ## [unreleased] [VER 0.17.2-PRE-ALPHA] - 2020-02-06
