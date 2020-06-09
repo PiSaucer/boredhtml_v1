@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - notepad dir
 - notepad meta tags
 - there is no game audio
+- there is no game meta tags
 
 
 ### Working on
