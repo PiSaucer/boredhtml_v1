@@ -34,10 +34,7 @@ pre {
 	padding-left: 10px;
 }
 .dosbox_iframe {
-	/*position: absolute;*/
 	display: block;
-	/*width: 100%;*/
-	height: 100%;
 	border: 0 none;
 	background: transparent;
 }
