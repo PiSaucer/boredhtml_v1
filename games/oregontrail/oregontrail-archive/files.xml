@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file name="00_coverscreenshot.jpg" source="original">
+    <mtime>1419686693</mtime>
+    <size>89012</size>
+    <format>JPEG</format>
+    <md5>c8cd5db701f0de132620b9b8f656287a</md5>
+    <crc32>947b1f22</crc32>
+    <sha1>5915fbff89a57c0c45003d8277649d664ac738e6</sha1>
+    <rotation>0</rotation>
+  </file>
+  <file name="00_coverscreenshot_thumb.jpg" source="derivative">
+    <format>JPEG Thumb</format>
+    <original>00_coverscreenshot.jpg</original>
+    <mtime>1419686720</mtime>
+    <size>5640</size>
+    <md5>d498c451a3faa93a1b24f2d64e2850f6</md5>
+    <crc32>d43b6e3e</crc32>
+    <sha1>56e9459aa57fa2f4d2e5bd51579ab0d11e603d73</sha1>
+  </file>
+  <file name="Oregon_Trail_The_1990.zip" source="original">
+    <mtime>1421223470</mtime>
+    <size>359527</size>
+    <format>ZIP</format>
+    <md5>4231286c119499dd5b32889dc0208928</md5>
+    <crc32>1e41d812</crc32>
+    <sha1>4958fb7c3028eaa3e36742afaf35073c0373808e</sha1>
+  </file>
+  <file name="Oregon_Trail_The_1990_screenshot.gif" source="original">
+    <mtime>1419686695</mtime>
+    <size>35116</size>
+    <format>Emulator Screenshot</format>
+    <md5>787c849bbf70eee3c347135c52fcbeb3</md5>
+    <crc32>cab2919c</crc32>
+    <sha1>50ed681b80250cec6f9ec53abcde3b0541533f71</sha1>
+  </file>
+  <file name="__ia_thumb.jpg" source="original">
+    <mtime>1535698376</mtime>
+    <size>9797</size>
+    <format>JPEG Thumb</format>
+    <rotation>0</rotation>
+    <md5>8b053af01c7f9ea1459013e73b9b9549</md5>
+    <crc32>2e581ed1</crc32>
+    <sha1>c220e497c597207bf17bb24f32f0380b63a302fb</sha1>
+  </file>
+  <file name="msdos_Oregon_Trail_The_1990.gif" source="original">
+    <mtime>1419686697</mtime>
+    <size>11766</size>
+    <format>Animated GIF</format>
+    <md5>14d588d1c3fee5d9b32aee7d12d994d0</md5>
+    <crc32>8854689f</crc32>
+    <sha1>7b8ac6129712dea0a7d2d39c5e330edc10ac0c1a</sha1>
+  </file>
+  <file name="msdos_Oregon_Trail_The_1990_files.xml" source="original">
+    <format>Metadata</format>
+    <md5>dcbb1fb8594e71f179599649ac4550d6</md5>
+  </file>
+  <file name="msdos_Oregon_Trail_The_1990_meta.sqlite" source="original">
+    <mtime>1421223474</mtime>
+    <size>10240</size>
+    <format>Metadata</format>
+    <md5>68178b10c9d77db65b56ca77a94d8568</md5>
+    <crc32>5146cfb7</crc32>
+    <sha1>9fcda3399e7b132a9c26b74de0a07458784b58d8</sha1>
+  </file>
+  <file name="msdos_Oregon_Trail_The_1990_meta.xml" source="original">
+    <mtime>1583871895</mtime>
+    <size>5019</size>
+    <format>Metadata</format>
+    <md5>50959a6e4ecfee6870c7e5836810991c</md5>
+    <crc32>50445d48</crc32>
+    <sha1>1371126423f1f9c3ef4f4b41182b3c38e9814e19</sha1>
+  </file>
+  <file name="msdos_Oregon_Trail_The_1990_reviews.xml" source="original">
+    <mtime>1589294146</mtime>
+    <size>143667</size>
+    <format>Metadata</format>
+    <md5>b552b1b5a1bc703e3aa9156fffa96235</md5>
+    <crc32>de76fe9b</crc32>
+    <sha1>905a8cc3c6cb5fd1cf021c8c49c6cfafa710c00d</sha1>
+  </file>
+  <file name="screenshot_00.jpg" source="original">
+    <mtime>1419686699</mtime>
+    <size>33943</size>
+    <format>JPEG</format>
+    <md5>2eec690d9c1e5896112dafef6d52a0f5</md5>
+    <crc32>7eb863e0</crc32>
+    <sha1>3844b752107041dff15cb6705795f6c9e69645f9</sha1>
+    <rotation>0</rotation>
+  </file>
+  <file name="screenshot_00_thumb.jpg" source="derivative">
+    <format>JPEG Thumb</format>
+    <original>screenshot_00.jpg</original>
+    <mtime>1419686721</mtime>
+    <size>4379</size>
+    <md5>688329340275a4d35557973e14bab846</md5>
+    <crc32>c430c8af</crc32>
+    <sha1>de7d62cd2e4324b5d85f0eff227bd13cd1a34eb6</sha1>
+  </file>
+  <file name="screenshot_01.jpg" source="original">
+    <mtime>1419686701</mtime>
+    <size>89012</size>
+    <md5>c8cd5db701f0de132620b9b8f656287a</md5>
+    <crc32>947b1f22</crc32>
+    <sha1>5915fbff89a57c0c45003d8277649d664ac738e6</sha1>
+    <format>JPEG</format>
+    <rotation>0</rotation>
+  </file>
+  <file name="screenshot_01_thumb.jpg" source="derivative">
+    <format>JPEG Thumb</format>
+    <original>screenshot_01.jpg</original>
+    <mtime>1419686722</mtime>
+    <size>5640</size>
+    <md5>d498c451a3faa93a1b24f2d64e2850f6</md5>
+    <crc32>d43b6e3e</crc32>
+    <sha1>56e9459aa57fa2f4d2e5bd51579ab0d11e603d73</sha1>
+  </file>
+</files>

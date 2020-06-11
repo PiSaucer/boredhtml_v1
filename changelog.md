@@ -24,6 +24,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - notepad meta tags
 - there is no game audio
 - there is no game meta tags
+- dosbox functionality
+- doom dosbox game
+- doom dir
 
 
 ### Working on
