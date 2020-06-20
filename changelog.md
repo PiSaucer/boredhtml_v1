@@ -16,12 +16,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 - gameboy emulator
+- oregon trail dosbox game
+- orgeon trail dir
 
 
 ### Working on
 - going to add "dir" to each game for easy use
 - and-ing meta tags
 - getting things done
+- gameboy save
 
 ## [unreleased] [VER 0.17.3-PRE-ALPHA] - 2020-06-08
 
