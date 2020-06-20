@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - gameboy emulator
 - oregon trail dosbox game
 - orgeon trail dir
+- game only search bar
 
 
 ### Working on

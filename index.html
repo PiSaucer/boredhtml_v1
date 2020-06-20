@@ -79,23 +79,30 @@
 
 <script src="//inc.freefind.com/inc/ffse-overlay.min.js" async></script>
   </div>
+<h5>Games only:</h5>
+<input type="text" id="gameFinder" onkeyup="gameFinder()" placeholder="Search for games.." title="Type in a game">
 
-  <script>
-    (function() {
-      var cx = '012564364030928642827:vklcgq4riqg';
-      var gcse = document.createElement('script');
-      gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(gcse, s);
-    })();
-  </script>
-<gcse:search enableAutoComplete="true" enableHistory="true" personalizedAds="true" disableWebSearch="true"></gcse:search>
-<gcse:searchresults defaultToImageSearch="true"></gcse:searchresults>
+<script>
+function gameFinder() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("gameFinder");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("Games");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
 
         <hr>
-        <div class="Games">
+        <div class="Games" id="Games">
         <h2>Games</h2>
         <ul>
         <li><a href="https://www.kixeye.com/game/battlepirates/home">Battle Pirates</a></li>
