@@ -11,6 +11,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [unreleased] [VER 0.17.4-PRE-ALPHA] - 2020-06-20
+
+
+### Added
+- gameboy emulator
+
+
+### Working on
+- going to add "dir" to each game for easy use
+- and-ing meta tags
+- getting things done
+
 ## [unreleased] [VER 0.17.3-PRE-ALPHA] - 2020-06-08
 
 

@@ -1,7 +1,7 @@
 
 # Bored In School Right Now Inc HTML
 
-![version name](https://img.shields.io/badge/version-VER%200.17.2--PRE--ALPHA-blue)
+![version name](https://img.shields.io/badge/version-VER%200.17.4--PRE--ALPHA-blue)
 
 ## Getting Started
 
@@ -83,7 +83,7 @@ Step 10: You're Done!!!
 
 
 ## Version
-- VER 0.17.2-PRE-ALPHA
+- VER 0.17.4-PRE-ALPHA
 
 ## Built With
 - Atom
