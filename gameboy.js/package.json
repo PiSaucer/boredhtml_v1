@@ -9,9 +9,12 @@
     "homepage": "http://juchi.github.io/gameboy.js/",
     "license": "MIT",
     "devDependencies": {
-        "grunt": "~0.4.5",
-        "grunt-cli": "~0.1.13",
+        "grunt": "^1.2.1",
+        "grunt-cli": "^1.3.2",
         "grunt-contrib-concat": "~0.5.1",
         "grunt-contrib-uglify": "^4.0.1"
+    },
+    "dependencies": {
+        "lodash": "^4.17.19"
     }
 }
