@@ -1,7 +1,7 @@
 
 # Bored In School Right Now Inc HTML
 
-![version name](https://img.shields.io/badge/version-VER%200.17.4--PRE--ALPHA-blue)
+![version name](https://img.shields.io/badge/version-VER%200.17.5--PRE--ALPHA-blue)
 
 ## Getting Started
 
