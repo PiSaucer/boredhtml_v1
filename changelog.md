@@ -11,6 +11,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [unreleased] [VER 0.17.5-PRE-ALPHA] - 2020-12-23
+### Added
+- new discord link
+- Wolfenstien 3D
+
+
 ## [unreleased] [VER 0.17.4-PRE-ALPHA] - 2020-06-20
 
 
