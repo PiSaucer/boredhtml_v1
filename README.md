@@ -98,6 +98,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 - **[PiSaucer](https://github.com/PiSaucer)** - *Initial work*
 - **[50izac02](https://github.com/50izac02)** - Starting to help
+- **[yeetedmeme](https://github.com/yeetedmeme)** - Minecraft bypass creator and adder of some other sites
 
 See also the list of other [contributors](https://github.com/PiSaucer/boredhtml/contributors) who participated in this project.
 
