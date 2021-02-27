@@ -14,13 +14,16 @@ What things you need to run the software:
 - js
 - node.js
 
+**Just anyway to host the website**
+
 What I am Using:
 
-- Chrome 83.0.4103.97 (Official Build) (64-bit
-- Python 3.8
-- PHP 7.X.X
+- Chrome 88.0.4324.190 (Official Build) (64-bit)
 - js build-in with Chrome
-- node.js v12.17.0
+- Python 3.X
+- PHP 7.X.X
+- node.js v12.X.X
+- firebase
 
 ### Installing
 
@@ -83,12 +86,13 @@ Step 10: You're Done!!!
 
 
 ## Version
-- VER 0.17.4-PRE-ALPHA
+- VER 0.17.5-PRE-ALPHA
 
 ## Built With
 - Atom
 - Notepad++
 - node.js
+- vscode
 
 ## Contributing
 
@@ -97,7 +101,6 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 ## Authors
 
 - **[PiSaucer](https://github.com/PiSaucer)** - *Initial work*
-- **[50izac02](https://github.com/50izac02)** - Starting to help
 - **[yeetedmeme](https://github.com/yeetedmeme)** - Minecraft bypass creator and adder of some other sites
 
 See also the list of other [contributors](https://github.com/PiSaucer/boredhtml/contributors) who participated in this project.
@@ -106,7 +109,3 @@ See also the list of other [contributors](https://github.com/PiSaucer/boredhtml/
 ## License
 
 MIT
-
-## Acknowledgments
-
-- From
