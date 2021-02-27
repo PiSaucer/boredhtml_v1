@@ -1,4 +1,5 @@
 @import url("bootstrap/bootstrap.css") !important;
+
 body {
 	font-family: roboto;
 	word-spacing: 2px;
@@ -13,12 +14,15 @@ footer {
 	margin-bottom: -50px !important;
 	margin-left: -50px !important;
 }
+
 h1 {
   text-align: center;
 }
+
 .logo {
   float: left;
 }
+
 img {
   display: inline-block;
 }
@@ -50,3 +54,8 @@ pre {
   margin-bottom: 12px;
 	box-sizing: border-box;
 }
+
+.search-container{
+    margin-right: 50px;
+}
+
