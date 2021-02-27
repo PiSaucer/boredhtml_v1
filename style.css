@@ -33,6 +33,11 @@ email_footer {
 pre {
   text-align: left;
 }
+
+hr {
+   margin-right: 50px;
+}
+
 .dir{
 	text-align: left;
 	padding-left: 10px;
