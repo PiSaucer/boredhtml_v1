@@ -35,7 +35,7 @@ pre {
 }
 
 hr {
-   margin-right: 50px;
+   margin-right: 50px !important;
 }
 
 .dir{
@@ -61,6 +61,6 @@ hr {
 }
 
 .search-container{
-    margin-right: 50px !important;
+    margin-right: 50px;
 }
 
