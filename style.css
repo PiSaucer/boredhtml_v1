@@ -1,4 +1,5 @@
 @import url("bootstrap/bootstrap.css") !important;
+
 body {
 	font-family: roboto;
 	word-spacing: 2px;
@@ -13,12 +14,15 @@ footer {
 	margin-bottom: -50px !important;
 	margin-left: -50px !important;
 }
+
 h1 {
   text-align: center;
 }
+
 .logo {
   float: left;
 }
+
 img {
   display: inline-block;
 }
@@ -29,7 +33,34 @@ email_footer {
 pre {
   text-align: left;
 }
+
+hr {
+   margin-right: 50px !important;
+}
+
 .dir{
 	text-align: left;
 	padding-left: 10px;
 }
+.dosbox_iframe {
+	display: block;
+	border: 0 none;
+	background: transparent;
+	margin: 0 auto;
+}
+#gameFinder {
+  background-image: url('searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+	box-sizing: border-box;
+}
+
+.search-container{
+    margin-right: 50px;
+}
+

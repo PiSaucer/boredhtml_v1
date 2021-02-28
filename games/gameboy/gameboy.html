@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <title>
+        Bored In School Right Now Inc HTML
+    </title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="../../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="gameboy.css">
+    <meta charset='utf-8'>
+    <meta name="description" content="Online Education Games">
+    <meta name="keywords" content="Games,unblocked">
+    <meta name="author" content="PiSaucer">
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../../index.html" style="color: black;">
+        <img src="../../images/logo.png" class="logo" alt="logo" height="42" width="42">
+        <h1>
+            Bored In School Right Now Inc HTML
+        </h1>
+    </a>
+    <hr>
+    <h2>Gameboy</h2>
+    <hr>
+    <p class="dir"><a href="../../index.html">Home</a> > <a href="#">Gameboy</a></p>
+    <hr>
+
+
+    <div id="container">
+
+        <div class="canvas-container"><canvas id="canvas">Your browser does not seem to support canvas.</canvas></div>
+
+        <p class="commands">
+            <button onclick="g.pause(true);" class="btn">Pause</button>
+            <button onclick="g.pause(false);" class="btn">Run</button>
+        </p>
+        <p class="commands">
+            <label><input id="sound-enable" type="checkbox" onchange="g.setSoundEnabled(this.checked);"/> Enable sound (experimental)</label>
+        </p>
+        <p class="commands">
+            <label>
+                Screen zoom
+                <select id="screen-zoom" onchange="g.setScreenZoom(this.value);">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <span id="status"></span> <span id="game-name"></span>
+        </p>
+        <p id="error" class="hide"></p>
+
+        <div class="rom-section">
+            <div id="rom-file">
+                <label>Choose a ROM file on your computer: <input class="btn" type="file" id="file"/></label>
+            </div>
+
+            <div id="rom-drop">
+                <div id="dropzone">
+                    <p>
+                        Or drop a ROM file here
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="keyboard-info" style="text-align:center;">
+            <p>Current keyboard mapping:</p>
+            <table align="center">
+                <thead>
+                    <tr>
+                        <th>Gameboy pad</th>
+                        <th>Keyboard mapping</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>G</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>START</td>
+                        <td>H</td>
+                    </tr>
+                    <tr>
+                        <td>SELECT</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>Directional pad</td>
+                        <td>Arrow keys</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="gameboy.js"></script>
+
+    <script type="text/javascript">
+        // configuration
+        var opts = {
+            romReaders: [
+                new GameboyJS.RomFileReader(),
+                new GameboyJS.RomDropFileReader(document.getElementById('dropzone')),
+                //new GameboyJS.RomFileReader('Pokemon-Red-Version.gb')
+            ]
+        };
+        var g = new GameboyJS.Gameboy(document.getElementById('canvas'), opts);
+        g.setSoundEnabled(document.getElementById('sound-enable').checked);
+        g.setScreenZoom(document.getElementById('screen-zoom').value);
+    </script>
+
+    <br>
+    <br>
+    <p>Made with: <a href="https://github.com/juchi/gameboy.js">gameboy.js</a></p>
+    <footer>
+        <hr>
+        <p>"Stay Bored My Dudes"</p>
+        <p class="email_footer">Email: <a href="#">boredinschoolrightnowinc@googlegroups.com</a></p>
+        <p class="email_footer">assistance email (not the owner but i help) <a href="mailto:20izac05disley@gmail.com">20izac05disley@gmail.com</a></p>
+        <p><b>I DO NOT OWN THESE GAMES</b></p>
+        <p>*May Not Work At all schools</p>
+    </footer>
+</body>
+
+</html>

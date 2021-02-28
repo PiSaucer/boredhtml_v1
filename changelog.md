@@ -11,7 +11,34 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
-## [unreleased] [VER 0.17.3-PRE-ALPHA] - 2020-06-08
+## [VER 0.17.6-PRE-ALPHA] - 2021-02-27
+
+## Removed
+- unneeded files
+
+## [VER 0.17.5-PRE-ALPHA] - 2020-12-23
+### Added
+- new discord link
+- Wolfenstien 3D
+
+
+## [VER 0.17.4-PRE-ALPHA] - 2020-06-20
+
+
+### Added
+- gameboy emulator
+- oregon trail dosbox game
+- orgeon trail dir
+- game only search bar
+
+
+### Working on
+- going to add "dir" to each game for easy use
+- and-ing meta tags
+- getting things done
+- gameboy save
+
+## [VER 0.17.3-PRE-ALPHA] - 2020-06-08
 
 
 ### Added
@@ -22,6 +49,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - all the notepad files are also hosted locally
 - notepad dir
 - notepad meta tags
+- there is no game audio
+- there is no game meta tags
+- dosbox functionality
+- doom dosbox game
+- doom dir
 
 
 ### Working on
@@ -34,9 +66,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - all the youtube images
 - all the youtube css
 - Template
+- the errors of there is no game
 
 
-## [unreleased] [VER 0.17.2-PRE-ALPHA] - 2020-02-06
+## [VER 0.17.2-PRE-ALPHA] - 2020-02-06
 
 ### Added
 
@@ -51,7 +84,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Working On
 - Making download buttons to the games
 
-## [unreleased] [VER 0.17.2-PRE-ALPHA] - 2020-01-23
+## [VER 0.17.2-PRE-ALPHA] - 2020-01-23
 
 
 ### Added
@@ -83,11 +116,7 @@ EX of DIR:  <p class="dir"><a href="../../index.html">Home</a> > <a href="#">Gam
 - going to add "dir" to each game for easy use
 - typing out the directions for students
 
-### Fixed
-
-
-
-## [unreleased] [VER 0.15.5-PRE-ALPHA] - 2019-11-29
+## [VER 0.15.5-PRE-ALPHA] - 2019-11-29
 
 
 ### Added
@@ -169,7 +198,7 @@ EX of DIR:  <p class="dir"><a href="../../index.html">Home</a> > <a href="#">Gam
 - super flash bros 2
 - there is no game
 
-## [unreleased] [VER 0.15.1-PRE-ALPHA] - 2019-10-24
+## [VER 0.15.1-PRE-ALPHA] - 2019-10-24
 
 
 ### Added
@@ -177,7 +206,7 @@ EX of DIR:  <p class="dir"><a href="../../index.html">Home</a> > <a href="#">Gam
 - Add search bars
 
 
-## [unreleased] [VER 0.15.0-PRE-ALPHA] - 2019-10-24
+## [VER 0.15.0-PRE-ALPHA] - 2019-10-24
 
 
 ### Added

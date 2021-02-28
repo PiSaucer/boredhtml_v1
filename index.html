@@ -3,10 +3,19 @@
     <title>
       Bored In School Right Now Inc HTML
       </title>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q473F59QW1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q473F59QW1');
+</script>
 	  <meta name="google-site-verification" content="0zuWIkB3Ldo2MPpwfLTnPQ0Uk6xHb_khG_l5Jpj9d58" />
     <meta name="description" content="Online Education Games">
     <meta name="keywords" content="Games,unblocked">
-    <meta name="author" content="PiSaucer">
+    <meta name="author" content="PiSaucer and yeetedmeme">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
@@ -20,91 +29,50 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
-      <a href="index.html" style="color: black;">
+	    <div class="header">
+      <a href="/" style="color: black;">
       <img src="images/logo.png" class="logo" alt="logo" height="42" width="42">
       <h1>
       Bored In School Right Now Inc HTML
         </h1>
+	              </a>
+	      </div>
 		<hr>
-        </a>
-		<div class="search-container">
-    <!-- start of freefind search box html for heroku -->
-    <h5>Heroku:</h5>
-<table cellpadding=0 cellspacing=0 border=0 >
-<tr>
-	<td  style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
-		<form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-		<input type="hidden" name="si" value="92899628">
-		<input type="hidden" name="pid" value="r">
-		<input type="hidden" name="n" value="0">
-		<input type="hidden" name="_charset_" value="">
-		<input type="hidden" name="bcd" value="&#247;">
-		<input type="text" name="query" size="15">
-		<input type="submit" value="search" class="btn">
-		</form>
-	</td>
-</tr>
-<tr>
-	<td style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
-		<a style="text-decoration:none; color:gray;" href="https://www.freefind.com"  rel="nofollow">search engine</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"  rel="nofollow" > by
-		<span style="color: #606060;">freefind</span></a>
-	</td>
-</tr>
-</table>
-<!-- end of freefind search box html for heroku -->
-<!-- start of freefind search box html for github-->
-<h5>Github.io:</h5>
-<table cellpadding=0 cellspacing=0 border=0 >
-<tr>
-	<td  style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
-		<form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
-		<input type="hidden" name="si" value="60672109">
-		<input type="hidden" name="pid" value="r">
-		<input type="hidden" name="n" value="0">
-		<input type="hidden" name="_charset_" value="">
-		<input type="hidden" name="bcd" value="&#247;">
-		<input type="text" name="query" size="15">
-		<input type="submit" value="search" class="btn">
-		</form>
-	</td>
-</tr>
-<tr>
-	<td style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
-		<a style="text-decoration:none; color:gray;" href="https://www.freefind.com"  rel="nofollow">search engine</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"  rel="nofollow" > by
-		<span style="color: #606060;">freefind</span></a>
-	</td>
-</tr>
-</table>
-<!-- end of freefind search box html for github -->
-
-<script src="//inc.freefind.com/inc/ffse-overlay.min.js" async></script>
-  </div>
-
-  <script>
-    (function() {
-      var cx = '012564364030928642827:vklcgq4riqg';
-      var gcse = document.createElement('script');
-      gcse.type = 'text/javascript';
-      gcse.async = true;
-      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(gcse, s);
-    })();
-  </script>
-<gcse:search enableAutoComplete="true" enableHistory="true" personalizedAds="true" disableWebSearch="true"></gcse:search>
-<gcse:searchresults defaultToImageSearch="true"></gcse:searchresults>
-
+	    <div class="search-container">
+<input type="text" id="gameFinder" onkeyup="gameFinder()" placeholder="Search for games only" title="Type in a game">
+<script>
+function gameFinder() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("gameFinder");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("Games");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+		    </div>
         <hr>
-        <div class="Games">
+        <div class="Games" id="Games">
         <h2>Games</h2>
         <ul>
+          <li><a href="https://portablemc.github.io/">Minecraft</a></li>
+          <li><a href="https://kaspammer.glitch.me/">Kahoot Bot flooder</a></li>
+          <li><a href="http://hexgl.bkcore.com/">HexGL</a></li>
         <li><a href="https://www.kixeye.com/game/battlepirates/home">Battle Pirates</a></li>
         <li><a href="http://www.streetracersgame.com/">*Street Racers</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.starcolon.com%2Fplanet%2F&sa=D&sntz=1&usg=AFQjCNHEMDFFiNZrClMl0utcovyA6brjQg">Planet of Cells</a></li>
         <li><a href="https://www.google.com/url?q=https%3A%2F%2Fwww.kixeye.com%2Fgame%2Fvegaconflict%2Fhome&sa=D&sntz=1&usg=AFQjCNHshJYEXMNuebqV6eArv9Ry03NgXw">Vega Conflict</a></li>
         <li><a href="https://www.google.com/url?q=https%3A%2F%2Fus.forgeofempires.com%2F&sa=D&sntz=1&usg=AFQjCNFLHLoggipROdF3nLYFMfuhvz7iqA">Forge of Empires</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fstrike.game321.com%2F&sa=D&sntz=1&usg=AFQjCNHuDO9CVHvq83faW9lwZpZdlq-svA">Strike Global</a></li>
-        <li><a href="games\bonk.io\bonkio.html">Bonk.io</a></li>
+        <li><a href="games/bonk.io/bonkio.html">Bonk.io</a></li>
         <li><a href="#">Happy Wheels</a></li>
         <ul>
           <li><a href="#">Demo</a></li>
@@ -112,18 +80,18 @@
           <li><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.totaljerkface.com%2Fhappy_wheels.php&sa=D&sntz=1&usg=AFQjCNEP_BZx2Q6zMEmbxdb5r6hB0aykGw">*Actual Website</a></li>
           </ul>
         <li><a href="games/2048/2048.html">2048</a></li>
-        <li><a href="games\cookieclicker\cookieclicker.html">Cookie Clicker</a></li>
+        <li><a href="games/cookieclicker/cookieclicker.html">Cookie Clicker</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fagar.io%2F&sa=D&sntz=1&usg=AFQjCNEYfyc_Pe2nm1qNNsWxdakicFfgLA">Agar.io</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.poptropica.com%2Fplay-poptropica.php%3Fsource%3DPOP_text_Play_HomeNavTop-pop%26medium%3DText%26campaign%3DPOPplay&sa=D&sntz=1&usg=AFQjCNEGXtKiil5m4l1VxlbMoxrizlIXlQ">Poptropica</a></li>
-        <li><a href="games\riddleschool\riddlemain.html">Riddle Schools</a></li>
+        <li><a href="games/riddleschool/riddlemain.html">Riddle Schools</a></li>
         <ul>
-          <li><a href="games\riddleschool\year1\year1.html">Riddle School - Year 1</a></li>
-          <li><a href="games\riddleschool\year2\year2.html">Riddle School - Year 2</a></li>
-          <li><a href="games\riddleschool\year3\year3.html">Riddle School - Year 3</a></li>
-          <li><a href="games\riddleschool\year4\year4.html">Riddle School - Year 4</a></li>
-          <li><a href="games\riddleschool\year5\year5.html">Riddle School - Year 5</a></li>
-          <li><a href="games\riddleschool\year6(transfer)\year6.html">Riddle Transfer - (Year 6)</a></li>
-          <li><a href="games\riddleschool\year7(transfer2)\year7.html">Riddle Transfer 2 - (Year 7)</a></li>
+          <li><a href="games/riddleschool/year1/year1.html">Riddle School - Year 1</a></li>
+          <li><a href="games/riddleschool/year2/year2.html">Riddle School - Year 2</a></li>
+          <li><a href="games/riddleschool/year3/year3.html">Riddle School - Year 3</a></li>
+          <li><a href="games/riddleschool/year4/year4.html">Riddle School - Year 4</a></li>
+          <li><a href="games/riddleschool/year5/year5.html">Riddle School - Year 5</a></li>
+          <li><a href="games/riddleschool/year6(transfer)/year6.html">Riddle Transfer - (Year 6)</a></li>
+          <li><a href="games/riddleschool/year7(transfer2)/year7.html">Riddle Transfer 2 - (Year 7)</a></li>
           </ul>
         <li><a href="games/supermarioflashes/supermarioflashmain.html">Super Mario Flashes</a></li>
         <ul>
@@ -162,20 +130,20 @@
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.sploder.com%2F&sa=D&sntz=1&usg=AFQjCNFMBa3alD1CzcpzNyz12jQnTilyRg">Sploder</a></li>
         <li><a href="https://lines.chromeexperiments.com/">Land Lines</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.higherlowergame.com%2F&sa=D&sntz=1&usg=AFQjCNHhMd9M9ujQ5FtyHfuj8ClU0g_9-A">Higher or Lower</a></li>
-        <li><a href="games\flashpacman\flashpacman.html">Flash Pacman</a></li>
-        <li><a href="games\megamanprojectx\megaman.html">Megaman Project X</a></li>
+        <li><a href="games/flashpacman/flashpacman.html">Flash Pacman</a></li>
+        <li><a href="games/megamanprojectx/megaman.html">Megaman Project X</a></li>
         <li><a href="#">Ultimate Flash Sonic</a></li>
-        <li><a href="games\portal\portal.html">Portal: The Flash Version</a></li>
-        <li><a href="games\bloonTDs\bloonmain.html">Bloons TDs</a></li>
+        <li><a href="games/portal/portal.html">Portal: The Flash Version</a></li>
+        <li><a href="games/bloonTDs/bloonmain.html">Bloons TDs</a></li>
         <ul>
-          <li><a href="games\bloonTDs\bloonTD\bloonstd.html">Bloons TD</a></li>
-          <li><a href="games\bloonTDs\bloonTD2\bloonstd2.html">Bloons TD 2</a></li>
-          <li><a href="games\bloonTDs\bloonTD3\bloonstd3.html">Bloons TD 3</a></li>
-          <li><a href="games\bloonTDs\bloonTD4\bloonstd4.html">Bloons TD 4</a></li>
-          <li><a href="games\bloonTDs\bloonTD5\bloonstd5.html">Bloons TD 5</a></li>
+          <li><a href="games/bloonTDs/bloonTD/bloonstd.html">Bloons TD</a></li>
+          <li><a href="games/bloonTDs/bloonTD2/bloonstd2.html">Bloons TD 2</a></li>
+          <li><a href="games/bloonTDs/bloonTD3/bloonstd3.html">Bloons TD 3</a></li>
+          <li><a href="games/bloonTDs/bloonTD4/bloonstd4.html">Bloons TD 4</a></li>
+          <li><a href="games/bloonTDs/bloonTD5/bloonstd5.html">Bloons TD 5</a></li>
           </ul>
         <li><a href="#">The Legend of Zelda And the Lampshade of No Real Significance</a></li>
-        <li><a href="https://boredinschoolrightnowhtml.herokuapp.com/games/thereisnogame/there%20is%20no%20game.html">There Is No Game</a></li>
+        <li><a href="games/thereisnogame/there%20is%20no%20game.html">There Is No Game</a></li>
         <li><a href="games/galaga/galaga.html">Galaga</a></li>
         <li><a href="games/frogger/frogger.html">Frogger</a></li>
         <li><a href="games/minecraftflashedition/minecraftflashedition.html">Minecraft Flash Edition</a></li>
@@ -194,10 +162,10 @@
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fen.akinator.com%2F&sa=D&sntz=1&usg=AFQjCNGIA4COpltUZ-KvfQ62M0hhMtW9tA">*Akinator</a></li>
         <li><a href="#">Club Penguin Online</a></li>
         <li><a href="games/dino/dino.html">T-Rex Game</a></li>
-        <li><a href="games\superflashbros\smashmain.html">Super Flash Bros</a></li>
+        <li><a href="games/superflashbros/smashmain.html">Super Flash Bros</a></li>
         <ul>
-          <li><a href="games\superflashbros\supersmashbrosflash\supersmash.html">Super Smash Bros. Flash</a></li>
-          <li><a href="games\superflashbros\supersmashbrosflash2\supersmash2.html">Super Smash Bros 2 Flash</a></li>
+          <li><a href="games/superflashbros/supersmashbrosflash/supersmash.html">Super Smash Bros. Flash</a></li>
+          <li><a href="games/superflashbros/supersmashbrosflash2/supersmash2.html">Super Smash Bros 2 Flash</a></li>
           </ul>
         <li><a href="games/oregontrail/oregontrail.html">Oregon Trail</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Femulator.online%2Fnes%2Fthe-legend-of-zelda%2F&sa=D&sntz=1&usg=AFQjCNH8PUEumHSaqkM6B-tT7RQ5TWQv-w">Legend of Zelda Orginial</a></li>
@@ -207,8 +175,8 @@
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fpokemon-planet.com%2F&sa=D&sntz=1&usg=AFQjCNFNt8Z_gz0CBulPZIdbJCJGrKJ8mw">Pokemon Planet</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Femulator.online%2Fsnes%2Fsuper-mario-world%2F&sa=D&sntz=1&usg=AFQjCNGNWKzoKQeB1ulyvWA_K5NBPdhzqA">Super Mario World</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Femulator.online%2Fnes%2Fsuper-mario-bros%2F&sa=D&sntz=1&usg=AFQjCNF_9SAeSq1EIk-lf3uuyiFE-lBhAA">Super Mario</a></li>
-        <li><a href="games\metalslug\metalslug.html">Metal Slug</a></li>
-        <li><a href="games\miimaker\miimaker.html">Mii Maker</a></li>
+        <li><a href="games/metalslug/metalslug.html">Metal Slug</a></li>
+        <li><a href="games/miimaker/miimaker.html">Mii Maker</a></li>
         <li><a href="https://www.google.com/url?q=https%3A%2F%2Fwww.totallyuselesswebsites.com&sa=D&sntz=1&usg=AFQjCNFXbRSuXyFTNAzjUSw5aS2sBV96WA">Totally Useless Websites</a></li>
         <li><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.theuselessweb.com%2F&sa=D&sntz=1&usg=AFQjCNGsVt37vj-_V606qEAolNZD7qYMyw">The Useless Web</a></li>
         <li><a href="games/mari0/mari0.html">mari0</a></li>
@@ -219,6 +187,8 @@
           </ul>
         <li><a href="#">Super Mario 63</li>
         <li><a href="http://zombs.io/">Zombs.io</a></li>
+        <li><a href="games/gameboy/gameboy.html">Gameboy</li>
+        <li><a href="games/wolf3d/wolf3d.html">Wolfenstien 3D</a></li>
         </ul>
         </div>
         <hr>
@@ -247,7 +217,7 @@
           <ul>
             <li><a href="https://sites.google.com/site/boredschoolrightnow/home">Bored In School Right Now Flash Edition</a></li>
             <li><a href="https://sites.google.com/site/boredinschoolrightnow2/">Bored In School Right Now Flash 2</a></li>
-            <li><a href="https://boredinschoolrightnowhtml.herokuapp.com/index.html">Bored In School Right Now HTML</a></li>
+            <li><a href="#">Bored In School Right Now HTML</a></li>
             <li><a href="https://www.google.com/url?q=https%3A%2F%2Fsites.google.com%2Fsite%2Fplayfunblocked%2F&sa=D&sntz=1&usg=AFQjCNG2fnRX5oYQZRDdDYGpcbdocqwr4A">Fun Unblocker Games 1.0</a></li>
             <li><a href="http://www.google.com/url?q=http%3A%2F%2Fwww.funblocked.com%2F&sa=D&sntz=1&usg=AFQjCNFJ3U-apykEaD7gF4vNGjjW-Jy8sg">Fun Blocker Games 2.0</a></li>
             <li><a href="https://www.google.com/url?q=https%3A%2F%2Fsites.google.com%2Fsite%2Fsubgfyfs%2F&sa=D&sntz=1&usg=AFQjCNEVEihVC6tzgj86MN_yFc6NRj7oRQ">Unblock Games For School!!!</a></li>
@@ -304,7 +274,7 @@
             <div class="ChatRoom">
               <h2>Chat Room</h2>
               <ul>
-                <li><a href="https://www.google.com/url?q=https%3A%2F%2Fdiscord.gg%2F7qTNdXd&sa=D&sntz=1&usg=AFQjCNFUj2y9ucHChm-HysCcD5DDZQ9Wng">Discord</a></li>
+                <li><a href="https://ptb.discord.com/">Discord</a></li>
                 <li><a href="https://www.google.com/url?q=https%3A%2F%2Fwww.chatzy.com%2F14058638923587&sa=D&sntz=1&usg=AFQjCNEeX7V24AvEMIX0quQpmV5j-VkQfg">Chatzy</a></li>
                 <li><a href="https://www.google.com/url?q=https%3A%2F%2Ftlk.io%2FBoredInSchoolRightNow&sa=D&sntz=1&usg=AFQjCNFs94SH2XcdGg666gHYfWH-7b9LQw">tlk.io</a></li>
                 <li><a href="https://www.google.com/url?q=https%3A%2F%2Fwww.rumbletalk.com%2Fclient%2Fchat.php%3F1wbn4CJ8&sa=D&sntz=1&usg=AFQjCNGdbxqBtON9IIiNsgoi9K9EFuq9wA">Rumble Talk</a></li>
@@ -313,7 +283,7 @@
                 <hr>
               </div>
 </div>
-            <div class="GoogleGroups">
+            <div class="GoogleGroups2">
               <h2>Google Groups</h2>
               <p>Please join google groups so you can easily contact me OR any other bored-er. OR make a statment a event or problem.</p>
               <a href="https://groups.google.com/forum/#!forum/boredinschoolrightnowinc">Join Now!</a>
@@ -327,16 +297,17 @@
                 </ul>
               </div>
             <div class="VER">
-              <p>VER 0.17.3-PRE-ALPHA</p>
-              <a href="https://github.com/PiSaucer/boredhtml" class="btn">Visit our Github</a>
+              <p>VER 0.17.5-PRE-ALPHA</p>
+              <a href="https://github.com/PiSaucer/boredhtml" class="btn btn-outline-dark">Visit our Github</a>
               <br>
-			  <a href="https://github.com/PiSaucer/boredhtml/archive/master.zip" download class="btn" style="boder: 2px solid black;">Download</a>
+	      <br>
+	      <a href="https://github.com/PiSaucer/boredhtml/archive/master.zip" download class="btn btn-outline-dark">Download</a>
             </div>
             <footer>
               <hr>
               <p>"Stay Bored My Dudes"</p>
               <p class="email_footer">Email: <a href="mailto:boredinschoolrightnowinc@googlegroups">boredinschoolrightnowinc@googlegroups.com</a></p>
-              <p class="email_footer">assistance email (not the owner but i help) <a href="mailto:20izac05disley@gmail.com">20izac05disley@gmail.com</a></p>
+              <p class="email_footer">assistance email <a href="mailto:portablemc@hackermail.com">portablemc@hackermail.com</a></p>
               <p><b>I DO NOT OWN THESE GAMES</b></a></p>
               <p>*May Not Work At all schools</p>
               </footer>
