@@ -44,6 +44,14 @@ hr {
     margin-top: 25px;
 }
 
+.header a {
+    color: black;
+}
+
+.header a:hover {
+    color: #2d3436;
+}
+
 ul {
     text-align: left;
 }
