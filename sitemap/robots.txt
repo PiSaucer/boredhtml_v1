@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Allow: /sitemap.htm
-Sitemap: https://pisaucer.github.io/sitemap.xml
