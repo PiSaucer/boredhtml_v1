@@ -1,70 +1,72 @@
-@import url("bootstrap/bootstrap.css") !important;
-
+@import url("bootstrap/bootstrap.css");
 body {
-	font-family: roboto;
-	word-spacing: 2px;
-	margin-left: 50px !important;
+    font-family: roboto;
+    word-spacing: 2px;
+    margin-left: 50px !important;
+    text-align: center;
 }
+
 footer {
-  text-align: center;
-  background-color: #2e3131;
-  color: #eeeeee;
-	height: 250px;
-	margin-left: -50px !important;
-	margin-bottom: -50px !important;
-	margin-left: -50px !important;
+    text-align: center;
+    background-color: #2e3131;
+    color: #eeeeee;
+    height: 250px;
+    margin-left: -50px !important;
+    margin-bottom: -50px !important;
+    margin-left: -50px !important;
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }
 
 .logo {
-  float: left;
+    float: left;
 }
 
 img {
-  display: inline-block;
+    display: inline-block;
 }
-email_footer {
-  text-decoration : none;
-  color: #eeeeee;
-}
+
 pre {
-  text-align: left;
+    text-align: left;
 }
 
 hr {
-   margin-right: 50px !important;
-}
-
-.dir{
-	text-align: left;
-	padding-left: 10px;
-}
-.dosbox_iframe {
-	display: block;
-	border: 0 none;
-	background: transparent;
-	margin: 0 auto;
-}
-#gameFinder {
-  background-image: url('searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-	box-sizing: border-box;
-}
-
-.search-container{
-    margin-right: 50px;
+    margin-right: 50px !important;
 }
 
 .header {
-	margin-top: 25px;
+    margin-top: 25px;
 }
 
+ul {
+    text-align: left;
+}
+
+#gameFinder {
+    background-image: url('searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.search-container {
+    margin-right: 50px;
+}
+
+.dosbox_iframe {
+    display: block;
+    border: 0 none;
+    background: transparent;
+    margin: 0 auto;
+}

@@ -1,84 +1,122 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>ERROR 404</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Favicon Information-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=bOXjlPdAPj">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=bOXjlPdAPj">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=bOXjlPdAPj">
+    <link rel="manifest" href="/favicon/site.webmanifest?v=bOXjlPdAPj">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=bOXjlPdAPj" color="#f1c40f">
+    <link rel="shortxcut icon" href="/favicon/favicon.ico?v=bOXjlPdAPj">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=bOXjlPdAPj">
+    <meta name="theme-color" content="#ffffff">
     <style>
-      ::-moz-selection {
-        background: #b3d4fc;
-        text-shadow: none;
-      }
-      ::selection {
-        background: #b3d4fc;
-        text-shadow: none;
-      }
-      body, html {
-        height: 100%;
-        overflow: hidden;
-        padding: 0;
-        margin: 0;
-      }
-      body {
-        background:#0000aa;
-        color:#ffffff;
-        font-family:courier;
-        font-size:12pt;
-        text-align:center;
-        margin:100px;
-        margin-top: 14%;
-      }
-      .neg {
-        background:#fff;
-        color:#0000aa;
-        padding:2px 8px;
-        font-weight:bold;
-      }
-      p {
-        margin: 30px 100px;
-        text-align: left;
-        width: 650px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      a,a:hover {
-        color:inherit;
-        font:inherit;
-        text-decoration: none;
-      }
-      .menu {
-        text-align:center;
-        margin-top:50px;
-      }
-      @-webkit-keyframes blinker {
-        0% { visibility: visible; }
-        50% { visibility: hidden; }
-        100% { visibility: visible; }
-      }
-      @keyframes blinker {
-        0% { visibility: visible; }
-        50% { visibility: hidden; }
-        100% { visibility: visible; }
-      }
-      blink {
-        -webkit-animation: blinker steps(1) 1s infinite;
+         ::-moz-selection {
+            background: #b3d4fc;
+            text-shadow: none;
+        }
+        
+         ::selection {
+            background: #b3d4fc;
+            text-shadow: none;
+        }
+        
+        body,
+        html {
+            height: 100%;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background: #0000aa;
+            color: #ffffff;
+            font-family: courier;
+            font-size: 12pt;
+            text-align: center;
+            margin: 100px;
+            margin-top: 14%;
+        }
+        
+        .neg {
+            background: #fff;
+            color: #0000aa;
+            padding: 2px 8px;
+            font-weight: bold;
+        }
+        
+        p {
+            margin: 30px 100px;
+            text-align: left;
+            width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        a,
+        a:hover {
+            color: inherit;
+            font: inherit;
+            text-decoration: none;
+        }
+        
+        .menu {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        @-webkit-keyframes blinker {
+            0% {
+                visibility: visible;
+            }
+            50% {
+                visibility: hidden;
+            }
+            100% {
+                visibility: visible;
+            }
+        }
+        
+        @keyframes blinker {
+            0% {
+                visibility: visible;
+            }
+            50% {
+                visibility: hidden;
+            }
+            100% {
+                visibility: visible;
+            }
+        }
+        
+        blink {
+            -webkit-animation: blinker steps(1) 1s infinite;
             animation: blinker steps(1) 1s infinite;
-      }
+        }
     </style>
-  </head>
-  <body onkeyup="bsod()" onclick="bsod()">
+</head>
+
+<body onkeyup="bsod()" onclick="bsod()">
     <span class="neg">ERROR 404</span>
     <p>
-    The page is missing or never was written. You can wait and<br />
-    see if it becomes available again, or you can restart your computer.
+        The page is missing or never was written. You can wait and<br /> see if it becomes available again, or you can restart your computer.
     </p>
     <p>
-    * Press CTRL+ALT+DEL to restart your computer. You will<br />
-     &nbsp; lose unsaved information in any programs that are running.
+        * Press CTRL+ALT+DEL to restart your computer. You will<br /> &nbsp; lose unsaved information in any programs that are running.
     </p>
-    <a href="index.html">Press any key to continue <blink>_</blink></a>
-  </body>
-  <script>function bsod() {window.location.href='index.html';}</script>
+    <a href="./">Press any key to continue <blink>_</blink></a>
+</body>
+<script>
+    function bsod() {
+        window.location.href = './';
+    }
+</script>
+
 </html>
