@@ -45,6 +45,7 @@ hr {
 }
 
 .header a:visited,
+.header a:active,
 .header a {
     color: black;
 }
