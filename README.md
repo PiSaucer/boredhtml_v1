@@ -3,6 +3,10 @@
 
 ![version name](https://img.shields.io/badge/version-VER%200.17.5--PRE--ALPHA-blue)
 
+## Demos
+- [pisaucer.github.io/boredhtml/](https://pisaucer.github.io/boredhtml/)
+- [boredhtml.web.app](https://boredhtml.web.app/)
+
 ## Getting Started
 
 ### Prerequisites
