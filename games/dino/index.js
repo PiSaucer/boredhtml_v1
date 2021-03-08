@@ -1010,7 +1010,7 @@
         this.textImgPos = textImgPos;
         this.restartImgPos = restartImgPos;
         this.draw();
-    };
+    }
 
 
     /**
@@ -1151,7 +1151,7 @@
             }
         }
         return false;
-    };
+    }
 
 
     /**
@@ -1166,7 +1166,7 @@
             box.y + adjustment.y,
             box.width,
             box.height);
-    };
+    }
 
 
     /**
@@ -1181,7 +1181,7 @@
         canvasCtx.strokeRect(obstacleBox.x, obstacleBox.y,
             obstacleBox.width, obstacleBox.height);
         canvasCtx.restore();
-    };
+    }
 
 
     /**
@@ -1207,7 +1207,7 @@
         }
 
         return crashed;
-    };
+    }
 
 
     //******************************************************************************
@@ -1224,7 +1224,7 @@
         this.y = y;
         this.width = w;
         this.height = h;
-    };
+    }
 
 
     //******************************************************************************
@@ -1261,7 +1261,7 @@
         this.timer = 0;
 
         this.init(speed);
-    };
+    }
 
     /**
      * Coefficient for calculating the maximum gap.
@@ -1515,7 +1515,7 @@
         this.jumpspotX = 0;
 
         this.init();
-    };
+    }
 
 
     /**
@@ -1876,7 +1876,7 @@
         this.config = DistanceMeter.config;
         this.maxScoreUnits = this.config.MAX_DISTANCE_UNITS;
         this.init(canvasWidth);
-    };
+    }
 
 
     /**
@@ -2126,7 +2126,7 @@
             Cloud.config.MAX_CLOUD_GAP);
 
         this.init();
-    };
+    }
 
 
     /**
@@ -2218,7 +2218,7 @@
         this.stars = [];
         this.drawStars = false;
         this.placeStars();
-    };
+    }
 
     /**
      * @enum {number}
@@ -2380,7 +2380,7 @@
 
         this.setSourceDimensions();
         this.draw();
-    };
+    }
 
 
     /**
@@ -2516,7 +2516,7 @@
         // Horizon
         this.horizonLine = null;
         this.init();
-    };
+    }
 
 
     /**

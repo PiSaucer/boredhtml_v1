@@ -1502,7 +1502,7 @@ var Module = null;
                   resolve();
                 }
               };
-     };
+     }
 
      var resizeCanvas = function (canvas, scale, resolution, aspectRatio) {
        if (scale && resolution) {
@@ -1692,7 +1692,7 @@ var Module = null;
        } else if ('onwebkitfullscreenchange' in document) {
          document.addEventListener('webkitfullscreenchange', fullScreenChangeHandler);
        }
-     };
+     }
 
      this.requestFullScreen = function () {
        if (typeof Module == "object" && "requestFullScreen" in Module) {
@@ -1729,7 +1729,7 @@ var Module = null;
                                   }
                                 });
      }
-   };
+   }
 
    /**
     * misc
@@ -1740,7 +1740,7 @@ var Module = null;
 
    function BFSOpenZip(loadedData) {
        return new BrowserFS.FileSystem.ZipFS(loadedData);
-   };
+   }
 
    // This is such a hack. We're not calling the BrowserFS api
    // "correctly", so we have to synthesize these flags ourselves
@@ -1798,7 +1798,7 @@ var Module = null;
                         fs.readFileSync(dosboxConfPath, null, flag_r),
                         null, flag_w, 0x1a4);
      }
-   };
+   }
 
    function extend(a, b) {
      if (a === null)
@@ -1901,7 +1901,7 @@ var Module = null;
        surfacePixelData[pixelOffset*4+1] = HEAPU8[pixels + (pixelOffset*channels+1)]; // G
        surfacePixelData[pixelOffset*4+2] = HEAPU8[pixels + (pixelOffset*channels+2)]; // B
        surfacePixelData[pixelOffset*4+3] = amask ? HEAPU8[pixels + (pixelOffset*channels+3)] : 0xff; // A
-     };
+     }
 
      surfaceData.ctx.putImageData(surfaceImageData, 0, 0);
 
