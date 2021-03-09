@@ -20,14 +20,14 @@ function PostBroadcastMessage(o)
 	// in the wrong order (e.g. "update ready" arrives before "started downloading update"). So to keep the consistent ordering,
 	// delay all messages by the same amount.
 	setTimeout(() => broadcastChannel.postMessage(o), 3000);
-};
+}
 
 function Broadcast(type)
 {
 	PostBroadcastMessage({
 		"type": type
 	});
-};
+}
 
 function BroadcastDownloadingUpdate(version)
 {
@@ -50,14 +50,14 @@ function GetCacheBaseName()
 	// Include the scope to avoid name collisions with any other SWs on the same origin.
 	// e.g. "c2offline-https://example.com/foo/" (won't collide with anything under bar/)
 	return CACHE_NAME_PREFIX + "-" + self.registration.scope;
-};
+}
 
 function GetCacheVersionName(version)
 {
 	// Append the version number to the cache name.
 	// e.g. "c2offline-https://example.com/foo/-v2"
 	return GetCacheBaseName() + "-v" + version;
-};
+}
 
 // Return caches.keys() filtered down to just caches we're interested in (with the right base name).
 // This filters out caches from unrelated scopes.
@@ -69,7 +69,7 @@ function GetAvailableCacheNames()
 		const cacheBaseName = GetCacheBaseName();
 		return cacheNames.filter(n => n.startsWith(cacheBaseName));
 	});
-};
+}
 
 // Identify if an update is pending, which is the case when we have 2 or more available caches.
 // One must be an update that is waiting, since the next navigate that does an upgrade will
@@ -78,7 +78,7 @@ function IsUpdatePending()
 {
 	return GetAvailableCacheNames()
 	.then(availableCacheNames => availableCacheNames.length >= 2);
-};
+}
 
 // Automatically deduce the main page URL (e.g. index.html or main.aspx) from the available browser windows.
 // This prevents having to hard-code an index page in the file list, implicitly caching it like AppCache did.
@@ -110,7 +110,7 @@ function GetMainPageUrl()
 		
 		return "";		// no main page URL could be identified
 	});
-};
+}
 
 // Hack to fetch optionally bypassing HTTP cache until fetch cache options are supported in Chrome (crbug.com/453190)
 function fetchWithBypass(request, bypassCache)
@@ -137,7 +137,7 @@ function fetchWithBypass(request, bypassCache)
 		// bypass disabled: perform normal fetch which is allowed to return from HTTP cache
 		return fetch(request);
 	}
-};
+}
 
 // Effectively a cache.addAll() that only creates the cache on all requests being successful (as a weak attempt at making it atomic)
 // and can optionally cache-bypass with fetchWithBypass in every request
@@ -183,7 +183,7 @@ function CreateCacheFromFileList(cacheName, fileList, bypassCache)
 			throw err;
 		});
 	});
-};
+}
 
 function UpdateCheck(isFirst)
 {
@@ -264,7 +264,7 @@ function UpdateCheck(isFirst)
 		// Update check fetches fail when we're offline, but in case there's any other kind of problem with it, log a warning.
 		console.warn(CONSOLE_PREFIX + "Update check failed: ", err);
 	});
-};
+}
 
 self.addEventListener('install', event =>
 {

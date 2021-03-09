@@ -93,7 +93,7 @@ if (typeof Object.getPrototypeOf !== "function")
 		this.x = x;
 		this.y = y;
 		cr.seal(this);
-	};
+	}
 	Vector2.prototype.offset = function (px, py)
 	{
 		this.x += px;
@@ -171,7 +171,7 @@ if (typeof Object.getPrototypeOf !== "function")
 	{
 		this.set(left, top, right, bottom);
 		cr.seal(this);
-	};
+	}
 	Rect.prototype.set = function (left, top, right, bottom)
 	{
 		this.left = left;
@@ -246,7 +246,7 @@ if (typeof Object.getPrototypeOf !== "function")
 		this.blx = 0;
 		this.bly = 0;
 		cr.seal(this);
-	};
+	}
 	Quad.prototype.set_from_rect = function (rc)
 	{
 		this.tlx = rc.left;
@@ -352,7 +352,7 @@ if (typeof Object.getPrototypeOf !== "function")
 					maxresult = c;
 			}
 		}
-	};
+	}
 	Quad.prototype.bounding_box = function (rc)
 	{
 		minmax4(this.tlx, this.trx, this.brx, this.blx);
@@ -500,7 +500,7 @@ if (typeof Object.getPrototypeOf !== "function")
 		{
 			if (b.hasOwnProperty(attr))
 			{
-;
+
 				a[attr] = b[attr];
 			}
 		}
@@ -757,7 +757,7 @@ if (typeof Object.getPrototypeOf !== "function")
 		this.values_cache = [];
 		this.cache_valid = true;
 		cr.seal(this);
-	};
+	}
 	ObjectSet_.prototype.contains = function (x)
 	{
 		if (this.isEmpty())
@@ -852,7 +852,7 @@ if (typeof Object.getPrototypeOf !== "function")
 	function set_append_to_arr(x)
 	{
 		current_arr[current_index++] = x;
-	};
+	}
 	ObjectSet_.prototype.update_cache = function ()
 	{
 		if (this.cache_valid)
@@ -863,7 +863,7 @@ if (typeof Object.getPrototypeOf !== "function")
 			current_arr = this.values_cache;
 			current_index = 0;
 			this.s["forEach"](set_append_to_arr);
-;
+
 			current_arr = null;
 			current_index = 0;
 		}
@@ -880,7 +880,7 @@ if (typeof Object.getPrototypeOf !== "function")
 						values_cache[n++] = items[p];
 				}
 			}
-;
+
 		}
 		this.cache_valid = true;
 	};
@@ -937,7 +937,7 @@ if (typeof Object.getPrototypeOf !== "function")
         this.t = 0;
         this.sum = 0;
 		cr.seal(this);
-	};
+	}
 	KahanAdder_.prototype.add = function (v)
 	{
 		this.y = v - this.c;
@@ -967,7 +967,7 @@ if (typeof Object.getPrototypeOf !== "function")
 		this.convexpolys = null;		// for physics behavior to cache separated polys
 		this.set_pts(pts_array_);
 		cr.seal(this);
-	};
+	}
 	CollisionPoly_.prototype.set_pts = function(pts_array_)
 	{
 		this.pts_array = pts_array_;
@@ -1194,7 +1194,7 @@ if (typeof Object.getPrototypeOf !== "function")
 		this.cellwidth = cellwidth_;
 		this.cellheight = cellheight_;
 		this.cells = {};
-	};
+	}
 	SparseGrid_.prototype.totalCellCount = 0;
 	SparseGrid_.prototype.getCell = function (x_, y_, create_if_missing)
 	{
@@ -1292,7 +1292,7 @@ if (typeof Object.getPrototypeOf !== "function")
 		this.cellwidth = cellwidth_;
 		this.cellheight = cellheight_;
 		this.cells = {};
-	};
+	}
 	RenderGrid_.prototype.totalCellCount = 0;
 	RenderGrid_.prototype.getCell = function (x_, y_, create_if_missing)
 	{
@@ -1418,21 +1418,21 @@ if (typeof Object.getPrototypeOf !== "function")
 		}
 		else
 			return new cr.GridCell(grid_, x_, y_);
-	};
+	}
 	function freeGridCell(c)
 	{
 		SparseGrid_.prototype.totalCellCount--;
 		c.objects.clear();
 		if (gridcellcache.length < 1000)
 			gridcellcache.push(c);
-	};
+	}
 	function GridCell_(grid_, x_, y_)
 	{
 		this.grid = grid_;
 		this.x = x_;
 		this.y = y_;
 		this.objects = new cr.ObjectSet();
-	};
+	}
 	GridCell_.prototype.isEmpty = function ()
 	{
 		return this.objects.isEmpty();
@@ -1465,14 +1465,14 @@ if (typeof Object.getPrototypeOf !== "function")
 		}
 		else
 			return new cr.RenderCell(grid_, x_, y_);
-	};
+	}
 	function freeRenderCell(c)
 	{
 		RenderGrid_.prototype.totalCellCount--;
 		c.reset();
 		if (rendercellcache.length < 1000)
 			rendercellcache.push(c);
-	};
+	}
 	function RenderCell_(grid_, x_, y_)
 	{
 		this.grid = grid_;
@@ -1482,18 +1482,18 @@ if (typeof Object.getPrototypeOf !== "function")
 		this.is_sorted = true;	// whether array is in correct sort order or not
 		this.pending_removal = new cr.ObjectSet();
 		this.any_pending_removal = false;
-	};
+	}
 	RenderCell_.prototype.isEmpty = function ()
 	{
 		if (!this.objects.length)
 		{
-;
-;
+
+
 			return true;
 		}
 		if (this.objects.length > this.pending_removal.count())
 			return false;
-;
+
 		this.flush_pending();		// takes fast path and just resets state
 		return true;
 	};
@@ -1518,7 +1518,7 @@ if (typeof Object.getPrototypeOf !== "function")
 			this.objects.push(inst);
 			this.is_sorted = true;
 		}
-;
+
 	};
 	RenderCell_.prototype.remove = function (inst)
 	{
@@ -1529,7 +1529,7 @@ if (typeof Object.getPrototypeOf !== "function")
 	};
 	RenderCell_.prototype.flush_pending = function ()
 	{
-;
+
 		if (!this.any_pending_removal)
 			return;		// not changed
 		if (this.pending_removal.count() === this.objects.length)
@@ -1544,7 +1544,7 @@ if (typeof Object.getPrototypeOf !== "function")
 	function sortByInstanceZIndex(a, b)
 	{
 		return a.zindex - b.zindex;
-	};
+	}
 	RenderCell_.prototype.ensure_sorted = function ()
 	{
 		if (this.is_sorted)
@@ -1780,7 +1780,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		this.gl = gl;
 		this.version = (this.gl.getParameter(this.gl.VERSION).indexOf("WebGL 2") === 0 ? 2 : 1);
 		this.initState();
-	};
+	}
 	GLWrap_.prototype.initState = function ()
 	{
 		var gl = this.gl;
@@ -1885,7 +1885,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			].join("\n");
 		}
 		var shaderProg = this.createShaderProgram({src: fsSource}, vsSource, "<default>");
-;
+
 		this.shaderPrograms.push(shaderProg);		// Default shader is always shader 0
 		fsSource = [
 			"uniform mediump sampler2D samplerFront;",
@@ -1907,7 +1907,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			"}"
 		].join("\n");
 		shaderProg = this.createShaderProgram({src: fsSource}, pointVsSource, "<point>");
-;
+
 		this.shaderPrograms.push(shaderProg);		// Point shader is always shader 1
 		fsSource = [
 			"varying mediump vec2 vTex;",
@@ -1918,7 +1918,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			"}"
 		].join("\n");
 		var shaderProg = this.createShaderProgram({src: fsSource}, vsSource, "<earlyz>");
-;
+
 		this.shaderPrograms.push(shaderProg);		// Early-Z shader is always shader 2
 		fsSource = [
 			"uniform lowp vec4 colorFill;",
@@ -1927,7 +1927,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			"}"
 		].join("\n");
 		var shaderProg = this.createShaderProgram({src: fsSource}, vsSource, "<fill>");
-;
+
 		this.shaderPrograms.push(shaderProg);		// Fill-color shader is always shader 3
 		for (var shader_name in cr.shaders)
 		{
@@ -1952,13 +1952,13 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			this.depthBuffer = gl.createRenderbuffer();
 		}
 		this.tmpVec3 = vec3.create([0, 0, 0]);
-;
+
 		var pointsizes = gl.getParameter(gl.ALIASED_POINT_SIZE_RANGE);
 		this.minPointSize = pointsizes[0];
 		this.maxPointSize = pointsizes[1];
 		if (this.maxPointSize > 2048)
 			this.maxPointSize = 2048;
-;
+
 		this.switchProgram(0);
 		cr.seal(this);
 	};
@@ -2024,14 +2024,14 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		if (this.locSeconds)
 			gl.uniform1f(this.locSeconds, 0.0);
 		this.hasCurrentMatMV = false;		// matMV needs updating
-	};
+	}
 	function areMat4sEqual(a, b)
 	{
 		return a[0]===b[0]&&a[1]===b[1]&&a[2]===b[2]&&a[3]===b[3]&&
 			   a[4]===b[4]&&a[5]===b[5]&&a[6]===b[6]&&a[7]===b[7]&&
 			   a[8]===b[8]&&a[9]===b[9]&&a[10]===b[10]&&a[11]===b[11]&&
 			   a[12]===b[12]&&a[13]===b[13]&&a[14]===b[14]&&a[15]===b[15];
-	};
+	}
 	GLShaderProgram.prototype.updateMatMV = function (mv)
 	{
 		if (areMat4sEqual(this.lpMatMV, mv))
@@ -2256,7 +2256,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		this.mat4param = null;		// for updateModelView()
 		this.shaderParams = [];		// for user parameters
 		cr.seal(this);
-	};
+	}
 	GLBatchJob.prototype.doSetEarlyZPass = function ()
 	{
 		var gl = this.gl;
@@ -2658,7 +2658,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	{
 		if (tex === this.lastTexture0)
 			return;
-;
+
 		var b = this.pushBatch();
 		b.type = BATCH_SETTEXTURE;
 		b.texParam = tex;
@@ -2878,7 +2878,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	GLWrap_.prototype.convexPoly = function(pts)
 	{
 		var pts_count = pts.length / 2;
-;
+
 		var tris = pts_count - 2;	// 3 points = 1 tri, 4 points = 2 tris, 5 points = 3 tris etc.
 		var last_tri = tris - 1;
 		var p0x = pts[0];
@@ -3012,7 +3012,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			mat4param[12] = seconds;
 			if (s.locSamplerBack)
 			{
-;
+
 				b.texParam = backTex;
 			}
 			else
@@ -3126,12 +3126,12 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	};
 	GLWrap_.prototype.setTextureFillMode = function ()
 	{
-;
+
 		this.switchProgram(0);
 	};
 	GLWrap_.prototype.restoreEarlyZMode = function ()
 	{
-;
+
 		this.switchProgram(2);
 	};
 	GLWrap_.prototype.present = function ()
@@ -3178,7 +3178,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			return webGL_texture;
 		}
 		this.endBatch();
-;
+
 		var gl = this.gl;
 		var isPOT = (cr.isPOT(img.width) && cr.isPOT(img.height));
 		webGL_texture = gl.createTexture();
@@ -3372,7 +3372,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	{
 		if (tex === this.renderToTex)
 			return;
-;
+
 		var b = this.pushBatch();
 		b.type = BATCH_RENDERTOTEXTURE;
 		b.texParam = tex;
@@ -3382,7 +3382,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	};
 	cr.GLWrap = GLWrap_;
 }());
-;
+
 (function()
 {
 	var raf = window["requestAnimationFrame"] ||
@@ -3607,7 +3607,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		this.snapshotData = "";
 		this.objectRefTable = [];
 		this.requestProjectData();
-	};
+	}
 	Runtime.prototype.requestProjectData = function ()
 	{
 		var self = this;
@@ -3754,7 +3754,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			}
 			if (this.enableFrontToBack)
 				this.glUnmaskedRenderer += " [front-to-back enabled]";
-;
+
 			if (!this.isDomFree)
 			{
 				this.overlay_canvas = document.createElement("canvas");
@@ -3811,7 +3811,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			if (this.fullscreen_mode > 0 && this.isDirectCanvas)
 			{
-;
+
 				this.canvas = null;
 				document.oncontextmenu = function (e) { return false; };
 				document.onselectstart = function (e) { return false; };
@@ -3830,7 +3830,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			}
 			if (!this.ctx)
 			{
-;
+
 				if (this.isCocoonJs)
 				{
 					attribs = {
@@ -4201,12 +4201,12 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	};
 	Runtime.prototype.GetObjectReference = function (i)
 	{
-;
+
 		return this.objectRefTable[i];
 	};
 	Runtime.prototype.loadProject = function (data_response)
 	{
-;
+
 		if (!data_response || !data_response["project"])
 			cr.logerror("Project model unavailable");
 		var pm = data_response["project"];
@@ -4276,7 +4276,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			m = pm[2][i];
 			p = this.GetObjectReference(m[0]);
-;
+
 			cr.add_common_aces(m, p.prototype);
 			plugin = new p(this);
 			plugin.singleglobal = m[1];
@@ -4293,7 +4293,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			m = pm[3][i];
 			plugin_ctor = this.GetObjectReference(m[1]);
-;
+
 			plugin = null;
 			for (j = 0, lenj = this.plugins.length; j < lenj; j++)
 			{
@@ -4303,10 +4303,10 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 					break;
 				}
 			}
-;
-;
+
+
 			var type_inst = new plugin.Type(plugin);
-;
+
 			type_inst.name = m[0];
 			type_inst.is_family = m[2];
 			type_inst.instvar_sids = m[3].slice(0);
@@ -4779,7 +4779,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			renderViaCanvas.height = h;
 			renderViaCtx = renderViaCanvas.getContext("2d");
 		}
-	};
+	}
 	function mipImage(arr, size)
 	{
 		if (size <= 128)
@@ -4790,7 +4790,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			return arr[1];
 		else
 			return arr[0];
-	};
+	}
 	Runtime.prototype.draw_c2_splash_loader = function(ctx)
 	{
 		if (isC2SplashDone)
@@ -4938,7 +4938,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			this.layouts[this.first_layout].startRunning();
 		else
 			this.layouts_by_index[0].startRunning();
-;
+
 		if (!this.uses_loader_layout)
 		{
 			this.loadingprogress = 1;
@@ -5357,7 +5357,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	};
 	Runtime.prototype.getObjectByUID = function (uid_)
 	{
-;
+
 		var uidstr = uid_.toString();
 		if (this.objectsByUid.hasOwnProperty(uidstr))
 			return this.objectsByUid[uidstr];
@@ -5371,12 +5371,12 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			return objectset_cache.pop();
 		else
 			return new cr.ObjectSet();
-	};
+	}
 	function free_objectset(s)
 	{
 		s.clear();
 		objectset_cache.push(s);
-	};
+	}
 	Runtime.prototype.DestroyInstance = function (inst)
 	{
 		var i, len;
@@ -5450,10 +5450,10 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	Runtime.prototype.ClearDeathRowForType = function (obj_set)
 	{
 		var arr = obj_set.valuesRef();			// get array of items from set
-;
+
 		var type = arr[0].type;
-;
-;
+
+
 		var i, len, j, lenj, w, f, layer_instances, inst;
 		cr.arrayRemoveAllFromObjectSet(type.instances, obj_set);
 		type.stale_iids = true;
@@ -5561,10 +5561,10 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		if (!initial_inst)
 			return null;
 		var type = this.types_by_index[initial_inst[1]];
-;
-;
+
+
 		var is_world = type.plugin.is_world;
-;
+
 		if (this.isloading && is_world && !type.isOnLoaderLayout)
 			return null;
 		if (is_world && !this.glwrap && initial_inst[0][11] === 11)
@@ -5621,7 +5621,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		if (is_world)
 		{
 			var wm = initial_inst[0];
-;
+
 			inst.x = cr.is_undefined(sx) ? wm[0] : sx;
 			inst.y = cr.is_undefined(sy) ? wm[1] : sy;
 			inst.z = wm[2];
@@ -5752,7 +5752,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		this.hasPendingInstances = true;
 		if (layer)
 		{
-;
+
 			layer.appendToInstanceList(inst, true);
 			if (layer.parallaxX !== 1 || layer.parallaxY !== 1)
 				type.any_instance_parallaxed = true;
@@ -6620,7 +6620,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			normal = cr.clamp_angle(clockwise_free_angle + half_diff);
 		}
-;
+
 		var vx = Math.cos(startangle);
 		var vy = Math.sin(startangle);
 		var nx = Math.cos(normal);
@@ -6633,7 +6633,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	var triggerSheetIndex = -1;
 	Runtime.prototype.trigger = function (method, inst, value /* for fast triggers */)
 	{
-;
+
 		if (!this.running_layout)
 			return false;
 		var sheet = this.running_layout.event_sheet;
@@ -6808,7 +6808,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	};
 	Runtime.prototype.popLocalVarStack = function ()
 	{
-;
+
 		this.localvar_stack_index--;
 	};
 	Runtime.prototype.getCurrentLocalVarStack = function ()
@@ -6826,7 +6826,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	};
 	Runtime.prototype.popEventStack = function ()
 	{
-;
+
 		this.event_stack_index--;
 	};
 	Runtime.prototype.getCurrentEventStack = function ()
@@ -6848,7 +6848,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	};
 	Runtime.prototype.popLoopStack = function ()
 	{
-;
+
 		this.loop_stack_index--;
 	};
 	Runtime.prototype.getCurrentLoop = function ()
@@ -6924,12 +6924,12 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			return false;
 		}
-	};
+	}
 	function makeSaveDb(e)
 	{
 		var db = e.target.result;
 		db.createObjectStore("saves", { keyPath: "slot" });
-	};
+	}
 	function IndexedDB_WriteSlot(slot_, data_, oncomplete_, onerror_)
 	{
 		try {
@@ -6950,7 +6950,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			onerror_(err);
 		}
-	};
+	}
 	function IndexedDB_ReadSlot(slot_, oncomplete_, onerror_)
 	{
 		try {
@@ -6977,7 +6977,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 		{
 			onerror_(err);
 		}
-	};
+	}
 	Runtime.prototype.signalContinuousPreview = function ()
 	{
 		this.signalledContinuousPreview = true;
@@ -6985,7 +6985,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	function doContinuousPreviewReload()
 	{
 		cr.logexport("Reloading for continuous preview");
-		if (!!window["c2cocoonjs"])
+		if (window["c2cocoonjs"])
 		{
 			CocoonJS["App"]["reload"]();
 		}
@@ -6996,7 +6996,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			else
 				window.location = window.location + "?continuous";
 		}
-	};
+	}
 	Runtime.prototype.handleSaveLoad = function ()
 	{
 		var self = this;
@@ -7151,7 +7151,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			}
 		}
 		return ret;
-	};
+	}
 	Runtime.prototype.saveToJSONString = function()
 	{
 		var i, len, j, lenj, type, layout, typeobj, g, c, a, v, p;
@@ -7408,7 +7408,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 						t = type.container[k];
 						if (type === t)
 							continue;
-;
+
 						inst.siblings.push(t.instances[iid]);
 					}
 				}
@@ -7588,7 +7588,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 			inst.visible = world.hasOwnProperty("v") ? world["v"] : true;
 			inst.collisionsEnabled = world.hasOwnProperty("ce") ? world["ce"] : true;
 			inst.my_timescale = world.hasOwnProperty("mts") ? world["mts"] : -1;
-			inst.blend_mode = world.hasOwnProperty("bm") ? world["bm"] : 0;;
+			inst.blend_mode = world.hasOwnProperty("bm") ? world["bm"] : 0;
 			inst.compositeOp = cr.effectToCompositeOp(inst.blend_mode);
 			if (this.gl)
 				cr.setGLBlend(inst, inst.blend_mode, this.gl);
@@ -7845,7 +7845,7 @@ window["cr_setSuspended"] = function(s)
 		{
 			var inst = im[i];
 			var type = this.runtime.types_by_index[inst[1]];
-;
+
 			if (!type.default_instance)
 				type.default_instance = inst;
 			this.initial_nonworld.push(inst);
@@ -7872,7 +7872,7 @@ window["cr_setSuspended"] = function(s)
 		this.rcTex = new cr.rect(0, 0, 1, 1);
 		this.rcTex2 = new cr.rect(0, 0, 1, 1);
 		this.persist_data = {};
-	};
+	}
 	Layout.prototype.saveObjectToPersist = function (inst)
 	{
 		var sidStr = inst.type.sid.toString();
@@ -7917,14 +7917,14 @@ window["cr_setSuspended"] = function(s)
 	function sort_by_zindex(a, b)
 	{
 		return a.zindex - b.zindex;
-	};
+	}
 	var first_layout = true;
 	Layout.prototype.startRunning = function ()
 	{
 		if (this.sheetname)
 		{
 			this.event_sheet = this.runtime.eventsheets[this.sheetname];
-;
+
 			this.event_sheet.updateDeepIncludes();
 		}
 		this.runtime.running_layout = this;
@@ -8046,7 +8046,7 @@ window["cr_setSuspended"] = function(s)
 			{
 				inst = this.runtime.createInstanceFromInit(this.initial_nonworld[i], null, true);
 			}
-;
+
 		}
 		this.runtime.changelayout = null;
 		this.runtime.ClearDeathRow();
@@ -8109,7 +8109,7 @@ window["cr_setSuspended"] = function(s)
 	};
 	Layout.prototype.stopRunning = function ()
 	{
-;
+
 		/*
 		if (this.runtime.glwrap)
 		{
@@ -8849,7 +8849,7 @@ window["cr_setSuspended"] = function(s)
 		{
 			var inst = im[i];
 			var type = this.runtime.types_by_index[inst[1]];
-;
+
 			if (!type.default_instance)
 			{
 				type.default_instance = inst;
@@ -8879,7 +8879,7 @@ window["cr_setSuspended"] = function(s)
 		this.updateActiveEffects();
 		this.rcTex = new cr.rect(0, 0, 1, 1);
 		this.rcTex2 = new cr.rect(0, 0, 1, 1);
-	};
+	}
 	Layer.prototype.updateActiveEffects = function ()
 	{
 		cr.clearArray(this.active_effect_types);
@@ -8914,7 +8914,7 @@ window["cr_setSuspended"] = function(s)
 		{
 			initial_inst = this.initial_instances[i];
 			type = this.runtime.types_by_index[initial_inst[1]];
-;
+
 			hasPersistBehavior = this.runtime.typeHasPersistBehavior(type);
 			keep = true;
 			if (!hasPersistBehavior || this.layout.first_visit)
@@ -9005,7 +9005,7 @@ window["cr_setSuspended"] = function(s)
 	};
 	Layer.prototype.appendToInstanceList = function (inst, add_to_grid)
 	{
-;
+
 		inst.zindex = this.instances.length;
 		this.instances.push(inst);
 		if (add_to_grid && this.useRenderCells && inst.rendercells)
@@ -9016,7 +9016,7 @@ window["cr_setSuspended"] = function(s)
 	};
 	Layer.prototype.prependToInstanceList = function (inst, add_to_grid)
 	{
-;
+
 		this.instances.unshift(inst);
 		this.setZIndicesStaleFrom(0);
 		if (add_to_grid && this.useRenderCells && inst.rendercells)
@@ -9026,7 +9026,7 @@ window["cr_setSuspended"] = function(s)
 	};
 	Layer.prototype.moveInstanceAdjacent = function (inst, other, isafter)
 	{
-;
+
 		var myZ = inst.get_zindex();
 		var insertZ = other.get_zindex();
 		cr.arrayRemove(this.instances, myZ);
@@ -9101,7 +9101,7 @@ window["cr_setSuspended"] = function(s)
 	{
 		cr.clearArray(a);
 		arr_cache.push(a);
-	};
+	}
 	function mergeSortedZArrays(a, b, out)
 	{
 		var i = 0, j = 0, k = 0, lena = a.length, lenb = b.length, ai, bj;
@@ -9125,7 +9125,7 @@ window["cr_setSuspended"] = function(s)
 			out[k] = a[i];
 		for ( ; j < lenb; ++j, ++k)
 			out[k] = b[j];
-	};
+	}
 	var next_arr = [];
 	function mergeAllSortedZArrays_pass(arr, first_pass)
 	{
@@ -9158,7 +9158,7 @@ window["cr_setSuspended"] = function(s)
 		}
 		cr.shallowAssignArray(arr, next_arr);
 		cr.clearArray(next_arr);
-	};
+	}
 	function mergeAllSortedZArrays(arr)
 	{
 		var first_pass = true;
@@ -9168,11 +9168,11 @@ window["cr_setSuspended"] = function(s)
 			first_pass = false;
 		}
 		return arr[0];
-	};
+	}
 	var render_arr = [];
 	Layer.prototype.getRenderCellInstancesToDraw = function ()
 	{
-;
+
 		this.updateZIndices();
 		this.render_grid.queryRange(this.viewLeft, this.viewTop, this.viewRight, this.viewBottom, render_arr);
 		if (!render_arr.length)
@@ -9199,12 +9199,12 @@ window["cr_setSuspended"] = function(s)
 			if (!this.runtime.layer_canvas)
 			{
 				this.runtime.layer_canvas = document.createElement("canvas");
-;
+
 				layer_canvas = this.runtime.layer_canvas;
 				layer_canvas.width = this.runtime.draw_width;
 				layer_canvas.height = this.runtime.draw_height;
 				this.runtime.layer_ctx = layer_canvas.getContext("2d");
-;
+
 				ctx_changed = true;
 			}
 			layer_canvas = this.runtime.layer_canvas;
@@ -9551,7 +9551,7 @@ window["cr_setSuspended"] = function(s)
 	};
 	Layer.prototype.drawInstanceGL = function (inst, glw)
 	{
-;
+
 		if (!inst.visible || inst.width === 0 || inst.height === 0)
 			return;
 		inst.update_bbox();
@@ -9572,7 +9572,7 @@ window["cr_setSuspended"] = function(s)
 	};
 	Layer.prototype.drawInstanceGL_earlyZPass = function (inst, glw)
 	{
-;
+
 		if (!inst.visible || inst.width === 0 || inst.height === 0)
 			return;
 		inst.update_bbox();
@@ -9816,7 +9816,7 @@ window["cr_setSuspended"] = function(s)
 	};
 	cr.layer = Layer;
 }());
-;
+
 (function()
 {
 	var allUniqueSolModifiers = [];
@@ -9838,11 +9838,11 @@ window["cr_setSuspended"] = function(s)
 			}
 			return true;
 		}
-	};
+	}
 	function solArraySorter(t1, t2)
 	{
 		return t1.index - t2.index;
-	};
+	}
 	function findMatchingSolModifier(arr)
 	{
 		var i, len, u, temp, subarr;
@@ -9870,7 +9870,7 @@ window["cr_setSuspended"] = function(s)
 		}
 		subarr.push(arr);
 		return arr;
-	};
+	}
 	function EventSheet(runtime, m)
 	{
 		this.runtime = runtime;
@@ -9886,7 +9886,7 @@ window["cr_setSuspended"] = function(s)
 		var i, len;
 		for (i = 0, len = em.length; i < len; i++)
 			this.init_event(em[i], null, this.events);
-	};
+	}
     EventSheet.prototype.toString = function ()
     {
         return this.name;
@@ -9932,7 +9932,7 @@ window["cr_setSuspended"] = function(s)
 			break;
         }
 		default:
-;
+
 		}
 	};
 	EventSheet.prototype.postInit = function ()
@@ -9994,7 +9994,7 @@ window["cr_setSuspended"] = function(s)
 			return true;
 		}
 		return false;
-	};
+	}
 	EventSheet.prototype.init_trigger = function (trig, index)
 	{
 		if (!trig.orblock)
@@ -10064,7 +10064,7 @@ window["cr_setSuspended"] = function(s)
 		this.instances = [];        // subset of picked instances
 		this.else_instances = [];	// subset of unpicked instances
 		this.select_all = true;
-	};
+	}
 	Selection.prototype.hasObjects = function ()
 	{
 		if (this.select_all)
@@ -10157,7 +10157,7 @@ window["cr_setSuspended"] = function(s)
 		this.toplevelevent = false;			// is an event block parented only by a top-level group
 		this.toplevelgroup = false;			// is parented only by other groups or is top-level (i.e. not in a subevent)
 		this.has_else_block = false;		// is followed by else
-;
+
 		this.conditions = [];
 		this.actions = [];
 		this.subevents = [];
@@ -10215,7 +10215,7 @@ window["cr_setSuspended"] = function(s)
 		{
 			this.is_else_block = (this.conditions[0].type == null && this.conditions[0].func == cr.system_object.prototype.cnds.Else);
 		}
-	};
+	}
 	window["_c2hh_"] = "8FB3D68C8CCFC180F66D1A0B3451B1FC87E1B91F";
 	EventBlock.prototype.postInit = function (hasElse/*, prevBlock_*/)
 	{
@@ -10298,7 +10298,7 @@ window["cr_setSuspended"] = function(s)
 					arr.push(t);
 			}
 		}
-	};
+	}
 	EventBlock.prototype.addSolModifier = function (type)
 	{
 		addSolModifierToList(type, this.solModifiers);
@@ -10444,7 +10444,7 @@ window["cr_setSuspended"] = function(s)
 		var i, len;
 		for (evinfo.cndindex = 0, len = this.conditions.length; evinfo.cndindex < len; evinfo.cndindex++)
 		{
-;
+
 			if (this.conditions[evinfo.cndindex].run())
 				any_true = true;
 			else if (!this.orblock)			// condition failed (let OR blocks run all conditions anyway)
@@ -10498,7 +10498,7 @@ window["cr_setSuspended"] = function(s)
 		this.index = -1;
 		this.anyParamVariesPerInstance = false;
 		this.func = this.runtime.GetObjectReference(m[1]);
-;
+
 		this.trigger = (m[3] > 0);
 		this.fasttrigger = (m[3] === 2);
 		this.looping = m[4];
@@ -10516,7 +10516,7 @@ window["cr_setSuspended"] = function(s)
 		else
 		{
 			this.type = this.runtime.types_by_index[m[0]];
-;
+
 			if (this.isstatic)
 				this.run = this.run_static;
 			else
@@ -10524,9 +10524,9 @@ window["cr_setSuspended"] = function(s)
 			if (m[2])
 			{
 				this.behaviortype = this.type.getBehaviorByName(m[2]);
-;
+
 				this.beh_index = this.type.getBehaviorIndexByName(m[2]);
-;
+
 			}
 			else
 			{
@@ -10550,7 +10550,7 @@ window["cr_setSuspended"] = function(s)
 			}
 			this.results.length = em.length;
 		}
-	};
+	}
 	Condition.prototype.postInit = function ()
 	{
 		var i, len, p;
@@ -10627,7 +10627,7 @@ window["cr_setSuspended"] = function(s)
 			for (i = 0, leni = arr.length; i < leni; ++i)
 			{
 				inst = arr[i];
-;
+
 				if (params_vary)
 				{
 					for (j = 0, lenj = parameters.length; j < lenj; ++j)
@@ -10668,7 +10668,7 @@ window["cr_setSuspended"] = function(s)
 			for (i = 0, leni = arr.length; i < leni; ++i)
 			{
 				inst = arr[i];
-;
+
 				if (params_vary)
 				{
 					for (j = 0, lenj = parameters.length; j < lenj; ++j)
@@ -10803,7 +10803,7 @@ window["cr_setSuspended"] = function(s)
 		this.index = -1;
 		this.anyParamVariesPerInstance = false;
 		this.func = this.runtime.GetObjectReference(m[1]);
-;
+
 		if (m[0] === -1)	// system
 		{
 			this.type = null;
@@ -10814,14 +10814,14 @@ window["cr_setSuspended"] = function(s)
 		else
 		{
 			this.type = this.runtime.types_by_index[m[0]];
-;
+
 			this.run = this.run_object;
 			if (m[2])
 			{
 				this.behaviortype = this.type.getBehaviorByName(m[2]);
-;
+
 				this.beh_index = this.type.getBehaviorIndexByName(m[2]);
-;
+
 			}
 			else
 			{
@@ -10843,7 +10843,7 @@ window["cr_setSuspended"] = function(s)
 			}
 			this.results.length = em.length;
 		}
-	};
+	}
 	Action.prototype.postInit = function ()
 	{
 		var i, len, p;
@@ -10927,11 +10927,11 @@ window["cr_setSuspended"] = function(s)
 		if (tempValues.length === tempValuesPtr)
 			tempValues.push(new cr.expvalue());
 		return tempValues[tempValuesPtr];
-	};
+	}
 	function popTempValue()
 	{
 		tempValuesPtr--;
-	};
+	}
 	function Parameter(owner, m)
 	{
 		this.owner = owner;
@@ -10981,7 +10981,7 @@ window["cr_setSuspended"] = function(s)
 				break;
 			case 6:		// layout
 				this.layout = this.runtime.layouts[m[1]];
-;
+
 				this.get = this.get_layout;
 				break;
 			case 9:		// keyb
@@ -10990,7 +10990,7 @@ window["cr_setSuspended"] = function(s)
 				break;
 			case 4:		// object
 				this.object = this.runtime.types_by_index[m[1]];
-;
+
 				this.get = this.get_object;
 				this.block.addSolModifier(this.object);
 				if (this.owner instanceof cr.action)
@@ -11031,16 +11031,16 @@ window["cr_setSuspended"] = function(s)
 				}
 				break;
 			default:
-;
+
 		}
-	};
+	}
 	Parameter.prototype.postInit = function ()
 	{
 		var i, len;
 		if (this.type === 11)		// eventvar
 		{
 			this.eventvar = this.runtime.getEventVariableByName(this.varname, this.block.parent);
-;
+
 		}
 		else if (this.type === 13)	// variadic, postInit all sub-params
 		{
@@ -11178,14 +11178,14 @@ window["cr_setSuspended"] = function(s)
 			this.localIndex = -1;
 			this.runtime.all_global_vars.push(this);
 		}
-	};
+	}
 	EventVariable.prototype.postInit = function ()
 	{
 		this.solModifiers = findMatchingSolModifier(this.solModifiers);
 	};
 	EventVariable.prototype.setValue = function (x)
 	{
-;
+
 		var lvs = this.runtime.getCurrentLocalVarStack();
 		if (!this.parent || this.is_static || !lvs)
 			this.data = x;
@@ -11229,7 +11229,7 @@ window["cr_setSuspended"] = function(s)
 		this.include_sheet = null;		// determined in postInit
 		this.include_sheet_name = m[1];
 		this.active = true;
-	};
+	}
 	EventInclude.prototype.toString = function ()
 	{
 		return "include:" + this.include_sheet.toString();
@@ -11237,8 +11237,8 @@ window["cr_setSuspended"] = function(s)
 	EventInclude.prototype.postInit = function ()
 	{
         this.include_sheet = this.runtime.eventsheets[this.include_sheet_name];
-;
-;
+
+
         this.sheet.includes.add(this);
 		this.solModifiers = findMatchingSolModifier(this.solModifiers);
 		var p = this.parent;
@@ -11283,7 +11283,7 @@ window["cr_setSuspended"] = function(s)
 		this.temp_parents_arr = [];
 		this.reset(null);
 		cr.seal(this);
-	};
+	}
 	EventStackFrame.prototype.reset = function (cur_event)
 	{
 		this.current_event = cur_event;
@@ -11311,7 +11311,7 @@ window["cr_setSuspended"] = function(s)
 		this.owner = owner_;
 		this.runtime = owner_.runtime;
 		this.type = m[0];
-;
+
 		this.get = [this.eval_int,
 					this.eval_float,
 					this.eval_string,
@@ -11368,7 +11368,7 @@ window["cr_setSuspended"] = function(s)
 			break;
 		case 19:	// system_exp
 			this.func = this.runtime.GetObjectReference(m[1]);
-;
+
 			if (this.func === cr.system_object.prototype.exps.random
 			 || this.func === cr.system_object.prototype.exps.choose)
 			{
@@ -11386,7 +11386,7 @@ window["cr_setSuspended"] = function(s)
 			break;
 		case 20:	// object_exp
 			this.object_type = this.runtime.types_by_index[m[1]];
-;
+
 			this.beh_index = -1;
 			this.func = this.runtime.GetObjectReference(m[2]);
 			this.return_string = m[3];
@@ -11410,7 +11410,7 @@ window["cr_setSuspended"] = function(s)
 			break;
 		case 21:		// instvar_exp
 			this.object_type = this.runtime.types_by_index[m[1]];
-;
+
 			this.return_string = m[2];
 			if (m[3])
 				this.instance_expr = new cr.expNode(owner_, m[3]);
@@ -11420,9 +11420,9 @@ window["cr_setSuspended"] = function(s)
 			break;
 		case 22:		// behavior_exp
 			this.object_type = this.runtime.types_by_index[m[1]];
-;
+
 			this.behavior_type = this.object_type.getBehaviorByName(m[2]);
-;
+
 			this.beh_index = this.object_type.getBehaviorIndexByName(m[2]);
 			this.func = this.runtime.GetObjectReference(m[3]);
 			this.return_string = m[4];
@@ -11458,13 +11458,13 @@ window["cr_setSuspended"] = function(s)
 				this.parameters.push(new cr.expNode(owner_, paramsModel[i]));
 		}
 		cr.seal(this);
-	};
+	}
 	ExpNode.prototype.postInit = function ()
 	{
 		if (this.type === 23)	// eventvar_exp
 		{
 			this.eventvar = this.owner.runtime.getEventVariableByName(this.varname, this.owner.block.parent);
-;
+
 		}
 		if (this.first)
 			this.first.postInit();
@@ -11489,11 +11489,11 @@ window["cr_setSuspended"] = function(s)
 		if (tempValues.length === tempValuesPtr)
 			tempValues.push(new cr.expvalue());
 		return tempValues[tempValuesPtr];
-	};
+	}
 	function popTempValue()
 	{
 		--tempValuesPtr;
-	};
+	}
 	function eval_params(parameters, results, temp)
 	{
 		var i, len;
@@ -11554,7 +11554,7 @@ window["cr_setSuspended"] = function(s)
 		if (index < 0)
 			index += len;
 		var returned_val = func.apply(instances[index], results);
-;
+
 	};
 	ExpNode.prototype.eval_behavior_exp = function (ret)
 	{
@@ -11604,7 +11604,7 @@ window["cr_setSuspended"] = function(s)
 			offset = inst.type.family_beh_map[object_type.family_index];
 		}
 		var returned_val = func.apply(inst.behavior_insts[beh_index + offset], results);
-;
+
 	};
 	ExpNode.prototype.eval_instvar_exp = function (ret)
 	{
@@ -11889,13 +11889,13 @@ window["cr_setSuspended"] = function(s)
 		this.type = type || cr.exptype.Integer;
 		this.data = data || 0;
 		this.object_class = null;
-;
-;
-;
+
+
+
 		if (this.type == cr.exptype.Integer)
 			this.data = Math.floor(this.data);
 		cr.seal(this);
-	};
+	}
 	ExpValue.prototype.is_int = function ()
 	{
 		return this.type === cr.exptype.Integer;
@@ -11942,19 +11942,19 @@ window["cr_setSuspended"] = function(s)
 	};
 	ExpValue.prototype.set_int = function (val)
 	{
-;
+
 		this.type = cr.exptype.Integer;
 		this.data = Math.floor(val);
 	};
 	ExpValue.prototype.set_float = function (val)
 	{
-;
+
 		this.type = cr.exptype.Float;
 		this.data = val;
 	};
 	ExpValue.prototype.set_string = function (val)
 	{
-;
+
 		this.type = cr.exptype.String;
 		this.data = val;
 	};
@@ -11983,7 +11983,7 @@ window["cr_setSuspended"] = function(s)
 		String: 2
 	};
 }());
-;
+
 cr.system_object = function (runtime)
 {
     this.runtime = runtime;
@@ -12016,7 +12016,7 @@ cr.system_object.prototype.saveToJSON = function ()
 			if (w.sols.hasOwnProperty(p))
 			{
 				t = this.runtime.types_by_index[parseInt(p, 10)];
-;
+
 				sobj = {
 					"sa": w.sols[p].sa,
 					"insts": []
@@ -12094,7 +12094,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 (function ()
 {
 	var sysProto = cr.system_object.prototype;
-	function SysCnds() {};
+	function SysCnds() {}
     SysCnds.prototype.EveryTick = function()
     {
         return true;
@@ -12346,7 +12346,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 			else
 				return 0;
 		}
-	};
+	}
 	SysCnds.prototype.ForEachOrdered = function (obj, exp, order)
     {
         var sol = obj.getCurrentSol();
@@ -12721,7 +12721,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		}
 		cacheRegex.lastIndex = 0;		// reset
 		return cacheRegex;
-	};
+	}
 	SysCnds.prototype.RegexTest = function (str_, regex_, flags_)
 	{
 		var regex = getRegex(regex_, flags_);
@@ -12802,14 +12802,14 @@ cr.system_object.prototype.loadFromJSON = function (o)
 			return t === 1;
 	};
 	sysProto.cnds = new SysCnds();
-    function SysActs() {};
+    function SysActs() {}
     SysActs.prototype.GoToLayout = function (to)
     {
 		if (this.runtime.isloading)
 			return;		// cannot change layout while loading on loader layout
 		if (this.runtime.changelayout)
 			return;		// already changing to a different layout
-;
+
         this.runtime.changelayout = to;
     };
 	SysActs.prototype.NextPrevLayout = function (prev)
@@ -12824,7 +12824,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		if (!prev && index === this.runtime.layouts_by_index.length - 1)
 			return;		// cannot go to next layout from last layout
 		var to = this.runtime.layouts_by_index[index + (prev ? -1 : 1)];
-;
+
         this.runtime.changelayout = to;
     };
     SysActs.prototype.CreateObject = function (obj, layer, x, y)
@@ -12939,7 +12939,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
     };
 	SysActs.prototype.SetVar = function(v, x)
 	{
-;
+
 		if (v.vartype === 0)
 		{
 			if (cr.is_number(x))
@@ -12952,7 +12952,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 	};
 	SysActs.prototype.AddVar = function(v, x)
 	{
-;
+
 		if (v.vartype === 0)
 		{
 			if (cr.is_number(x))
@@ -12965,7 +12965,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 	};
 	SysActs.prototype.SubVar = function(v, x)
 	{
-;
+
 		if (v.vartype === 0)
 		{
 			if (cr.is_number(x))
@@ -13039,13 +13039,13 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		}
 		w.deleteme = false;
 		return w;
-	};
+	}
 	function freeWaitObject(w)
 	{
 		cr.wipe(w.sols);
 		cr.clearArray(w.solModifiers);
 		waitobjrecycle.push(w);
-	};
+	}
 	var solstateobjects = [];
 	function allocSolStateObject()
 	{
@@ -13059,12 +13059,12 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		}
 		s.sa = false;
 		return s;
-	};
+	}
 	function freeSolStateObject(s)
 	{
 		cr.clearArray(s.insts);
 		solstateobjects.push(s);
-	};
+	}
 	SysActs.prototype.Wait = function (seconds)
 	{
 		if (seconds < 0)
@@ -13237,7 +13237,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 			return;		// cannot change layout while loading on loader layout
 		if (this.runtime.changelayout)
 			return;		// already changing to different layout
-;
+
 		var l;
 		for (l in this.runtime.layouts)
 		{
@@ -13254,7 +13254,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 			return;		// cannot restart loader layouts
 		if (this.runtime.changelayout)
 			return;		// already changing to a different layout
-;
+
 		if (!this.runtime.running_layout)
 			return;
 		this.runtime.changelayout = this.runtime.running_layout;
@@ -13416,11 +13416,11 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		var indexA = a[1];
 		var indexB = b[1];
 		return indexA - indexB;
-	};
+	}
 	function SortInstancesByValue(a, b)
 	{
 		return a[1] - b[1];
-	};
+	}
 	SysActs.prototype.SortZOrderByInstVar = function (obj, iv)
 	{
 		if (!obj)
@@ -13469,7 +13469,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		}
 	};
 	sysProto.acts = new SysActs();
-    function SysExps() {};
+    function SysExps() {}
     SysExps.prototype["int"] = function(ret, x)
     {
         if (cr.is_string(x))
@@ -14019,7 +14019,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		lastMatchesStr = str_;
 		lastMatchesRegex = regex_;
 		lastMatchesFlags = flags_;
-	};
+	}
 	SysExps.prototype.regexmatchcount = function (ret, str_, regex_, flags_)
 	{
 		var regex = getRegex(regex_, flags_);
@@ -14115,7 +14115,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 		cr.truncateArray(this.waits, j);
 	};
 }());
-;
+
 (function () {
 	cr.add_common_aces = function (m, pluginProto)
 	{
@@ -15016,7 +15016,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 				--i;
 			}
 		}
-;
+
 		return null;
 	};
 	cr.type_getCurrentSol = function ()
@@ -15057,7 +15057,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 	};
 	cr.type_popSol = function ()
 	{
-;
+
 		this.cur_sol--;
 	};
 	cr.type_getBehaviorByName = function (behname)
@@ -15162,7 +15162,7 @@ cr.system_object.prototype.loadFromJSON = function (o)
 			case 5:     // greater/equal
 				return x >= y;
 			default:
-;
+
 				return false;
 		}
 	};
@@ -15217,7 +15217,7 @@ cr.shaders["shift"] = {src: ["varying mediump vec2 vTex;",
 	animated: false,
 	parameters: [["xshift", 0, 0], ["yshift", 0, 0]] }
 ;
-;
+
 cr.plugins_.AJAX = function(runtime)
 {
 	this.runtime = runtime;
@@ -15431,7 +15431,7 @@ cr.plugins_.AJAX = function(runtime)
 			errorFunc();
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.OnComplete = function (tag)
 	{
 		return cr.equals_nocase(tag, this.curTag);
@@ -15453,7 +15453,7 @@ cr.plugins_.AJAX = function(runtime)
 		return cr.equals_nocase(tag, this.curTag);
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Request = function (tag_, url_)
 	{
 		var self = this;
@@ -15521,7 +15521,7 @@ cr.plugins_.AJAX = function(runtime)
 		next_override_mime = m;
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.LastData = function (ret)
 	{
 		ret.set_string(this.lastData);
@@ -15536,8 +15536,8 @@ cr.plugins_.AJAX = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Audio = function(runtime)
 {
 	this.runtime = runtime;
@@ -15590,7 +15590,7 @@ cr.plugins_.Audio = function(runtime)
 		var i = playOnNextInput.indexOf(a);
 		if (i === -1)
 			playOnNextInput.push(a);
-	};
+	}
 	function tryPlayAudioElement(a)
 	{
 		var audioElem = a.instanceObject;
@@ -15613,7 +15613,7 @@ cr.plugins_.Audio = function(runtime)
 		{
 			addAudioToPlayOnNextInput(a);
 		}
-	};
+	}
 	function playQueuedAudio()
 	{
 		var i, len, m, playRet;
@@ -15643,7 +15643,7 @@ cr.plugins_.Audio = function(runtime)
 				}
 			}
 		}
-	};
+	}
 	function playDummyBuffer()
 	{
 		if (context["state"] === "suspended" && context["resume"])
@@ -15655,7 +15655,7 @@ cr.plugins_.Audio = function(runtime)
 		source["buffer"] = buffer;
 		source["connect"](context["destination"]);
 		startSource(source);
-	};
+	}
 	document.addEventListener("touchend", playQueuedAudio, true);
 	document.addEventListener("click", playQueuedAudio, true);
 	document.addEventListener("keydown", playQueuedAudio, true);
@@ -15669,7 +15669,7 @@ cr.plugins_.Audio = function(runtime)
 		if (v > 1)
 			v = 1;
 		return v;
-	};
+	}
 	function linearToDb(x)
 	{
 		if (x < 0)
@@ -15677,15 +15677,15 @@ cr.plugins_.Audio = function(runtime)
 		if (x > 1)
 			x = 1;
 		return linearToDb_nocap(x);
-	};
+	}
 	function dbToLinear_nocap(x)
 	{
 		return Math.pow(10, x / 20);
-	};
+	}
 	function linearToDb_nocap(x)
 	{
 		return (Math.log(x) / Math.log(10)) * 20;
-	};
+	}
 	var effects = {};
 	function getDestinationForTag(tag)
 	{
@@ -15696,35 +15696,35 @@ cr.plugins_.Audio = function(runtime)
 				return effects[tag][0].getInputNode();
 		}
 		return context["destination"];
-	};
+	}
 	function createGain()
 	{
 		if (context["createGain"])
 			return context["createGain"]();
 		else
 			return context["createGainNode"]();
-	};
+	}
 	function createDelay(d)
 	{
 		if (context["createDelay"])
 			return context["createDelay"](d);
 		else
 			return context["createDelayNode"](d);
-	};
+	}
 	function startSource(s, scheduledTime)
 	{
 		if (s["start"])
 			s["start"](scheduledTime || 0);
 		else
 			s["noteOn"](scheduledTime || 0);
-	};
+	}
 	function startSourceAt(s, x, d, scheduledTime)
 	{
 		if (s["start"])
 			s["start"](scheduledTime || 0, x);
 		else
 			s["noteGrainOn"](scheduledTime || 0, x, d - x);
-	};
+	}
 	function stopSource(s)
 	{
 		try {
@@ -15734,7 +15734,7 @@ cr.plugins_.Audio = function(runtime)
 				s["noteOff"](0);
 		}
 		catch (e) {}
-	};
+	}
 	function setAudioParam(ap, value, ramp, time)
 	{
 		if (!ap)
@@ -15760,7 +15760,7 @@ cr.plugins_.Audio = function(runtime)
 			ap["exponentialRampToValueAtTime"](value, time);
 			break;
 		}
-	};
+	}
 	var filterTypes = ["lowpass", "highpass", "bandpass", "lowshelf", "highshelf", "peaking", "notch", "allpass"];
 	function FilterEffect(type, freq, detune, q, gain, mix)
 	{
@@ -15784,7 +15784,7 @@ cr.plugins_.Audio = function(runtime)
 		this.inputNode["connect"](this.filterNode);
 		this.inputNode["connect"](this.dryNode);
 		this.filterNode["connect"](this.wetNode);
-	};
+	}
 	FilterEffect.prototype.connectTo = function (node)
 	{
 		this.wetNode["disconnect"]();
@@ -15852,7 +15852,7 @@ cr.plugins_.Audio = function(runtime)
 		this.mainNode["connect"](this.delayNode);
 		this.delayNode["connect"](this.delayGainNode);
 		this.delayGainNode["connect"](this.mainNode);
-	};
+	}
 	DelayEffect.prototype.connectTo = function (node)
 	{
 		this.wetNode["disconnect"]();
@@ -15912,7 +15912,7 @@ cr.plugins_.Audio = function(runtime)
 		this.inputNode["connect"](this.convolveNode);
 		this.inputNode["connect"](this.dryNode);
 		this.convolveNode["connect"](this.wetNode);
-	};
+	}
 	ConvolveEffect.prototype.connectTo = function (node)
 	{
 		this.wetNode["disconnect"]();
@@ -15969,7 +15969,7 @@ cr.plugins_.Audio = function(runtime)
 		this.oscNode["connect"](this.oscGainNode);
 		this.oscGainNode["connect"](this.delayNode["delayTime"]);
 		startSource(this.oscNode);
-	};
+	}
 	FlangerEffect.prototype.connectTo = function (node)
 	{
 		this.dryNode["disconnect"]();
@@ -16044,7 +16044,7 @@ cr.plugins_.Audio = function(runtime)
 		this.oscNode["connect"](this.oscGainNode);
 		this.oscGainNode["connect"](this.filterNode["frequency"]);
 		startSource(this.oscNode);
-	};
+	}
 	PhaserEffect.prototype.connectTo = function (node)
 	{
 		this.dryNode["disconnect"]();
@@ -16104,7 +16104,7 @@ cr.plugins_.Audio = function(runtime)
 		this.params = [g];
 		this.node = createGain();
 		this.node["gain"]["value"] = g;
-	};
+	}
 	GainEffect.prototype.connectTo = function (node_)
 	{
 		this.node["disconnect"]();
@@ -16140,7 +16140,7 @@ cr.plugins_.Audio = function(runtime)
 		this.oscNode["connect"](this.oscGainNode);
 		this.oscGainNode["connect"](this.node["gain"]);
 		startSource(this.oscNode);
-	};
+	}
 	TremoloEffect.prototype.connectTo = function (node_)
 	{
 		this.node["disconnect"]();
@@ -16191,7 +16191,7 @@ cr.plugins_.Audio = function(runtime)
 		this.inputNode["connect"](this.ringNode);
 		this.inputNode["connect"](this.dryNode);
 		this.ringNode["connect"](this.wetNode);
-	};
+	}
 	RingModulatorEffect.prototype.connectTo = function (node_)
 	{
 		this.wetNode["disconnect"]();
@@ -16249,7 +16249,7 @@ cr.plugins_.Audio = function(runtime)
 		this.preGain["connect"](this.waveShaper);
 		this.waveShaper["connect"](this.postGain);
 		this.postGain["connect"](this.wetNode);
-	};
+	}
 	DistortionEffect.prototype.setDrive = function (drive, makeupgain)
 	{
 		if (drive < 0.01)
@@ -16331,7 +16331,7 @@ cr.plugins_.Audio = function(runtime)
 			this.node["release"]["value"] = release;
 		}
 		catch (e) {}
-	};
+	}
 	CompressorEffect.prototype.connectTo = function (node_)
 	{
 		this.node["disconnect"]();
@@ -16359,7 +16359,7 @@ cr.plugins_.Audio = function(runtime)
 		this.signal = new Uint8Array(fftSize);
 		this.peak = 0;
 		this.rms = 0;
-	};
+	}
 	AnalyserEffect.prototype.tick = function ()
 	{
 		this.node["getFloatFrequencyData"](this.freqBins);
@@ -16401,7 +16401,7 @@ cr.plugins_.Audio = function(runtime)
 	{
 		this.obj = null;
 		this.loadUid = 0;
-	};
+	}
 	ObjectTracker.prototype.setObject = function (obj_)
 	{
 		this.obj = obj_;
@@ -16493,7 +16493,7 @@ cr.plugins_.Audio = function(runtime)
 			this.bufferObject = true;
 			break;
 		}
-	};
+	}
 	C2AudioBuffer.prototype.release = function ()
 	{
 		var i, len, j, a;
@@ -16762,7 +16762,7 @@ cr.plugins_.Audio = function(runtime)
 			this.instanceObject = true;
 			break;
 		}
-	};
+	}
 	C2AudioInstance.prototype.hasEnded = function ()
 	{
 		var time;
@@ -16897,7 +16897,7 @@ cr.plugins_.Audio = function(runtime)
 				}
 				catch (err)
 				{
-;
+
 				}
 			}
 			tryPlayAudioElement(this);
@@ -16937,7 +16937,7 @@ cr.plugins_.Audio = function(runtime)
 					}
 					catch (err)
 					{
-;
+
 					}
 				}
 				tryPlayAudioElement(this);
@@ -17463,19 +17463,19 @@ cr.plugins_.Audio = function(runtime)
 			}
 			switch (api) {
 			case API_HTML5:
-;
+
 				break;
 			case API_WEBAUDIO:
-;
+
 				break;
 			case API_CORDOVA:
-;
+
 				break;
 			case API_APPMOBI:
-;
+
 				break;
 			default:
-;
+
 			}
 		this.runtime.tickMe(this);
 		}
@@ -17899,7 +17899,7 @@ cr.plugins_.Audio = function(runtime)
 			{
 				completed += Math.floor(p.size / 2);
 			}
-		};
+		}
 		return completed;
 	};
 	instanceProto.releaseAllMusicBuffers = function ()
@@ -17975,7 +17975,7 @@ cr.plugins_.Audio = function(runtime)
 			return 1;
 		else
 			return -1;
-	};
+	}
 	function getAudioByTag(tag, sort_by_playing)
 	{
 		cr.clearArray(taggedAudio);
@@ -17999,7 +17999,7 @@ cr.plugins_.Audio = function(runtime)
 		}
 		if (sort_by_playing)
 			taggedAudio.sort(SortByIsPlaying);
-	};
+	}
 	function reconnectEffects(tag)
 	{
 		var i, len, arr, n, toNode = context["destination"];
@@ -18027,7 +18027,7 @@ cr.plugins_.Audio = function(runtime)
 			micSource["disconnect"]();
 			micSource["connect"](toNode);
 		}
-	};
+	}
 	function addEffectForTag(tag, fx)
 	{
 		if (!effects.hasOwnProperty(tag))
@@ -18035,8 +18035,8 @@ cr.plugins_.Audio = function(runtime)
 		else
 			effects[tag].push(fx);
 		reconnectEffects(tag);
-	};
-	function Cnds() {};
+	}
+	function Cnds() {}
 	Cnds.prototype.OnEnded = function (t)
 	{
 		return cr.equals_nocase(audTag, t);
@@ -18081,7 +18081,7 @@ cr.plugins_.Audio = function(runtime)
 		return false;
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Play = function (file, looping, vol, tag)
 	{
 		if (silent)
@@ -18529,11 +18529,11 @@ cr.plugins_.Audio = function(runtime)
 		for (i = 0, len = audioBuffers.length; i < len; ++i)
 		{
 			audioBuffers[i].release();
-		};
+		}
 		cr.clearArray(audioBuffers);
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.Duration = function (ret, tag)
 	{
 		getAudioByTag(tag, true);
@@ -18582,7 +18582,7 @@ cr.plugins_.Audio = function(runtime)
 			return arr[index];
 		else
 			return null;
-	};
+	}
 	Exps.prototype.AnalyserFreqBinCount = function (ret, tag, index)
 	{
 		tag = tag.toLowerCase();
@@ -18633,8 +18633,8 @@ cr.plugins_.Audio = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Browser = function(runtime)
 {
 	this.runtime = runtime;
@@ -18682,7 +18682,7 @@ cr.plugins_.Browser = function(runtime)
 				browserInstance.onSWMessage(e);
 			});
 		}
-	};
+	}
 	pluginProto.Instance = function(type)
 	{
 		this.type = type;
@@ -18802,8 +18802,8 @@ cr.plugins_.Browser = function(runtime)
 				batteryManager = manager;
 			});
 		}
-	};
-	function Cnds() {};
+	}
+	function Cnds() {}
 	Cnds.prototype.CookiesEnabled = function()
 	{
 		return navigator ? navigator.cookieEnabled : false;
@@ -18919,7 +18919,7 @@ cr.plugins_.Browser = function(runtime)
 		return true;
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Alert = function (msg)
 	{
 		if (!this.runtime.isDomFree)
@@ -19024,7 +19024,7 @@ cr.plugins_.Browser = function(runtime)
 		if (console && console.warn)
 			console.warn("Fullscreen request failed: ", e);
 		crruntime["setSize"](window.innerWidth, window.innerHeight);
-	};
+	}
 	Acts.prototype.RequestFullScreen = function (stretchmode)
 	{
 		if (this.runtime.isDomFree)
@@ -19245,7 +19245,7 @@ cr.plugins_.Browser = function(runtime)
 			screen["msUnlockOrientation"]();
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.URL = function (ret)
 	{
 		ret.set_string(this.runtime.isDomFree ? "" : window.location.toString());
@@ -19448,8 +19448,8 @@ cr.plugins_.Browser = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Button = function(runtime)
 {
 	this.runtime = runtime;
@@ -19655,7 +19655,7 @@ cr.plugins_.Button = function(runtime)
 	instanceProto.drawGL = function(glw)
 	{
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.OnClicked = function ()
 	{
 		return true;
@@ -19665,7 +19665,7 @@ cr.plugins_.Button = function(runtime)
 		return this.isCheckbox && this.inputElem.checked;
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetText = function (text)
 	{
 		if (this.runtime.isDomFree)
@@ -19724,11 +19724,11 @@ cr.plugins_.Button = function(runtime)
 		this.inputElem.checked = !this.inputElem.checked;
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Function = function(runtime)
 {
 	this.runtime = runtime;
@@ -19759,20 +19759,20 @@ cr.plugins_.Function = function(runtime)
 		this.name = "";
 		this.retVal = 0;
 		this.params = [];
-	};
+	}
 	function pushFuncStack()
 	{
 		funcStackPtr++;
 		if (funcStackPtr === funcStack.length)
 			funcStack.push(new FuncStackEntry());
 		return funcStack[funcStackPtr];
-	};
+	}
 	function getCurrentFuncStack()
 	{
 		if (funcStackPtr < 0)
 			return null;
 		return funcStack[funcStackPtr];
-	};
+	}
 	function getOneAboveFuncStack()
 	{
 		if (!funcStack.length)
@@ -19781,12 +19781,12 @@ cr.plugins_.Function = function(runtime)
 		if (i >= funcStack.length)
 			i = funcStack.length - 1;
 		return funcStack[i];
-	};
+	}
 	function popFuncStack()
 	{
-;
+
 		funcStackPtr--;
-	};
+	}
 	instanceProto.onCreate = function()
 	{
 		isInPreview = (typeof cr_is_preview !== "undefined");
@@ -19820,7 +19820,7 @@ cr.plugins_.Function = function(runtime)
 			return fs.retVal;
 		};
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.OnFunction = function (name_)
 	{
 		var fs = getCurrentFuncStack();
@@ -19839,7 +19839,7 @@ cr.plugins_.Function = function(runtime)
 		return cr.do_cmp(fs.params[index_], cmp_, value_);
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.CallFunction = function (name_, params_)
 	{
 		var fs = pushFuncStack();
@@ -19849,7 +19849,7 @@ cr.plugins_.Function = function(runtime)
 		var ran = this.runtime.trigger(cr.plugins_.Function.prototype.cnds.OnFunction, this, fs.name);
 		if (isInPreview && !ran)
 		{
-;
+
 		}
 		popFuncStack();
 	};
@@ -19865,7 +19865,7 @@ cr.plugins_.Function = function(runtime)
 	{
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.ReturnValue = function (ret)
 	{
 		var fs = getOneAboveFuncStack();
@@ -19881,7 +19881,7 @@ cr.plugins_.Function = function(runtime)
 			ret.set_int(fs.params.length);
 		else
 		{
-;
+
 			ret.set_int(0);
 		}
 	};
@@ -19897,13 +19897,13 @@ cr.plugins_.Function = function(runtime)
 			}
 			else
 			{
-;
+
 				ret.set_int(0);
 			}
 		}
 		else
 		{
-;
+
 			ret.set_int(0);
 		}
 	};
@@ -19919,15 +19919,15 @@ cr.plugins_.Function = function(runtime)
 		var ran = this.runtime.trigger(cr.plugins_.Function.prototype.cnds.OnFunction, this, fs.name);
 		if (isInPreview && !ran)
 		{
-;
+
 		}
 		popFuncStack();
 		ret.set_any(fs.retVal);
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Keyboard = function(runtime)
 {
 	this.runtime = runtime;
@@ -20039,7 +20039,7 @@ cr.plugins_.Keyboard = function(runtime)
 	{
 		this.triggerKey = o["triggerKey"];
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsKeyDown = function(key)
 	{
 		return this.keyMap[key];
@@ -20076,9 +20076,9 @@ cr.plugins_.Keyboard = function(runtime)
 		return (key === this.triggerKey);
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.LastKeyCode = function (ret)
 	{
 		ret.set_int(this.triggerKey);
@@ -20152,15 +20152,15 @@ cr.plugins_.Keyboard = function(runtime)
 		case 223:	return "`";
 		default:	return String.fromCharCode(kc);
 		}
-	};
+	}
 	Exps.prototype.StringFromKeyCode = function (ret, kc)
 	{
 		ret.set_string(fixedStringFromCharCode(kc));
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Mouse = function(runtime)
 {
 	this.runtime = runtime;
@@ -20297,7 +20297,7 @@ cr.plugins_.Mouse = function(runtime)
 			this.runtime.trigger(cr.plugins_.Mouse.prototype.cnds.OnRelease, this);
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.OnClick = function (button, type)
 	{
 		return button === this.triggerButton && type === this.triggerType;
@@ -20333,7 +20333,7 @@ cr.plugins_.Mouse = function(runtime)
 		return dir === this.triggerDir;
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	var lastSetCursor = null;
 	Acts.prototype.SetCursor = function (c)
 	{
@@ -20362,7 +20362,7 @@ cr.plugins_.Mouse = function(runtime)
 		document.body.style.cursor = cursor_style;
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.X = function (ret, layerparam)
 	{
 		var layer, oldScale, oldZoomRate, oldParallaxX, oldAngle;
@@ -20437,8 +20437,8 @@ cr.plugins_.Mouse = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Particles = function(runtime)
 {
 	this.runtime = runtime;
@@ -20507,7 +20507,7 @@ cr.plugins_.Particles = function(runtime)
 		this.gs = 0;			// gravity speed
 		this.age = 0;
 		cr.seal(this);
-	};
+	}
 	Particle.prototype.init = function ()
 	{
 		var owner = this.owner;
@@ -20840,13 +20840,13 @@ cr.plugins_.Particles = function(runtime)
 			}
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsSpraying = function ()
 	{
 		return this.spraying;
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetSpraying = function (set_)
 	{
 		this.spraying = (set_ !== 0);
@@ -20943,7 +20943,7 @@ cr.plugins_.Particles = function(runtime)
 		this.timeout = x;
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.ParticleCount = function (ret)
 	{
 		ret.set_int(this.particles.length);
@@ -21018,8 +21018,8 @@ cr.plugins_.Particles = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Sprite = function(runtime)
 {
 	this.runtime = runtime;
@@ -21053,7 +21053,7 @@ cr.plugins_.Sprite = function(runtime)
 			this.datauri = tmpcanvas.toDataURL("image/png");
 		}
 		return this.datauri;
-	};
+	}
 	typeProto.onCreate = function()
 	{
 		if (this.is_family)
@@ -21658,7 +21658,7 @@ cr.plugins_.Sprite = function(runtime)
 		y += this.y;
 		return getX ? x : y;
 	};
-	function Cnds() {};
+	function Cnds() {}
 	var arrCache = [];
 	function allocArr()
 	{
@@ -21666,21 +21666,21 @@ cr.plugins_.Sprite = function(runtime)
 			return arrCache.pop();
 		else
 			return [0, 0, 0];
-	};
+	}
 	function freeArr(a)
 	{
 		a[0] = 0;
 		a[1] = 0;
 		a[2] = 0;
 		arrCache.push(a);
-	};
+	}
 	function makeCollKey(a, b)
 	{
 		if (a < b)
 			return "" + a + "," + b;
 		else
 			return "" + b + "," + a;
-	};
+	}
 	function collmemory_add(collmemory, a, b, tickcount)
 	{
 		var a_uid = a.uid;
@@ -21696,7 +21696,7 @@ cr.plugins_.Sprite = function(runtime)
 		arr[1] = b_uid;
 		arr[2] = tickcount;
 		collmemory[key] = arr;
-	};
+	}
 	function collmemory_remove(collmemory, a, b)
 	{
 		var key = makeCollKey(a.uid, b.uid);
@@ -21705,7 +21705,7 @@ cr.plugins_.Sprite = function(runtime)
 			freeArr(collmemory[key]);
 			delete collmemory[key];
 		}
-	};
+	}
 	function collmemory_removeInstance(collmemory, inst)
 	{
 		var uid = inst.uid;
@@ -21722,7 +21722,7 @@ cr.plugins_.Sprite = function(runtime)
 				}
 			}
 		}
-	};
+	}
 	var last_coll_tickcount = -2;
 	function collmemory_has(collmemory, a, b)
 	{
@@ -21737,7 +21737,7 @@ cr.plugins_.Sprite = function(runtime)
 			last_coll_tickcount = -2;
 			return false;
 		}
-	};
+	}
 	var candidates1 = [];
 	Cnds.prototype.OnCollision = function (rtype)
 	{
@@ -21899,7 +21899,7 @@ cr.plugins_.Sprite = function(runtime)
 		}
 		cr.clearArray(candidates2);
 		return ret;
-	};
+	}
 	typeProto.finish = function (do_pick)
 	{
 		if (!needscollisionfinish)
@@ -22003,7 +22003,7 @@ cr.plugins_.Sprite = function(runtime)
 		return this.collisionsEnabled;
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Spawn = function (obj, layer, imgpt)
 	{
 		if (!obj || !layer)
@@ -22230,7 +22230,7 @@ cr.plugins_.Sprite = function(runtime)
 		}
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.AnimationFrame = function (ret)
 	{
 		ret.set_int(this.cur_frame);
@@ -22272,8 +22272,8 @@ cr.plugins_.Sprite = function(runtime)
 /* global cr,log,assert2 */
 /* jshint globalstrict: true */
 /* jshint strict: true */
-;
-;
+
+
 cr.plugins_.Spritefont2 = function(runtime)
 {
 	this.runtime = runtime;
@@ -23046,8 +23046,8 @@ cr.plugins_.Spritefont2 = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Text = function(runtime)
 {
 	this.runtime = runtime;
@@ -23131,7 +23131,7 @@ cr.plugins_.Text = function(runtime)
 			this.rcTex = new cr.rect(0, 0, 1, 1);
 		if (this.runtime.glwrap)
 			this.runtime.tickMe(this);
-;
+
 	};
 	instanceProto.parseFont = function ()
 	{
@@ -23427,11 +23427,11 @@ cr.plugins_.Text = function(runtime)
 			return linesCache.pop();
 		else
 			return {};
-	};
+	}
 	function freeLine(l)
 	{
 		linesCache.push(l);
-	};
+	}
 	function freeAllLines(arr)
 	{
 		var i, len;
@@ -23440,7 +23440,7 @@ cr.plugins_.Text = function(runtime)
 			freeLine(arr[i]);
 		}
 		cr.clearArray(arr);
-	};
+	}
 	pluginProto.WordWrap = function (text, lines, ctx, width, wrapbyword)
 	{
 		if (!text || !text.length)
@@ -23472,7 +23472,7 @@ cr.plugins_.Text = function(runtime)
 		if (!str.length || str.charAt(str.length - 1) !== " ")
 			return str;
 		return str.substring(0, str.length - 1);
-	};
+	}
 	pluginProto.WrapText = function (text, lines, ctx, width, wrapbyword)
 	{
 		var wordArray;
@@ -23534,7 +23534,7 @@ cr.plugins_.Text = function(runtime)
 			freeLine(lines[i]);
 		lines.length = lineIndex;
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.CompareText = function(text_to_compare, case_sensitive)
 	{
 		if (case_sensitive)
@@ -23543,7 +23543,7 @@ cr.plugins_.Text = function(runtime)
 			return cr.equals_nocase(this.text, text_to_compare);
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetText = function(param)
 	{
 		if (cr.is_number(param) && param < 1e9)
@@ -23639,7 +23639,7 @@ cr.plugins_.Text = function(runtime)
 			setTimeout(refreshFunc, i * 100);
 			setTimeout(refreshFunc, i * 1000);
 		}
-;
+
 	};
 	Acts.prototype.SetEffect = function (effect)
 	{
@@ -23649,7 +23649,7 @@ cr.plugins_.Text = function(runtime)
 		this.runtime.redraw = true;
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.Text = function(ret)
 	{
 		ret.set_string(this.text);
@@ -23680,8 +23680,8 @@ cr.plugins_.Text = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Touch = function(runtime)
 {
 	this.runtime = runtime;
@@ -23725,7 +23725,7 @@ cr.plugins_.Touch = function(runtime)
 		appmobi_accx = evt.x;
 		appmobi_accy = evt.y;
 		appmobi_accz = evt.z;
-	};
+	}
 	var pg_accx = 0;
 	var pg_accy = 0;
 	var pg_accz = 0;
@@ -23734,7 +23734,7 @@ cr.plugins_.Touch = function(runtime)
 		pg_accx = evt.x;
 		pg_accy = evt.y;
 		pg_accz = evt.z;
-	};
+	}
 	var theInstance = null;
 	var touchinfo_cache = [];
 	function AllocTouchInfo(x, y, id, index)
@@ -23746,12 +23746,12 @@ cr.plugins_.Touch = function(runtime)
 			ret = new TouchInfo();
 		ret.init(x, y, id, index);
 		return ret;
-	};
+	}
 	function ReleaseTouchInfo(ti)
 	{
 		if (touchinfo_cache.length < 100)
 			touchinfo_cache.push(ti);
-	};
+	}
 	var GESTURE_HOLD_THRESHOLD = 15;		// max px motion for hold gesture to register
 	var GESTURE_HOLD_TIMEOUT = 500;			// time for hold gesture to register
 	var GESTURE_TAP_TIMEOUT = 333;			// time for tap gesture to register
@@ -23771,7 +23771,7 @@ cr.plugins_.Touch = function(runtime)
 		this.startindex = 0;
 		this.triggeredHold = false;
 		this.tooFarForHold = false;
-	};
+	}
 	TouchInfo.prototype.init = function (x, y, id, index)
 	{
 		var nowtime = cr.performance_now();
@@ -24241,7 +24241,7 @@ cr.plugins_.Touch = function(runtime)
 	{
 		return (e["sourceCapabilities"] && e["sourceCapabilities"]["firesTouchEvents"]) ||
 				(e.originalEvent && e.originalEvent["sourceCapabilities"] && e.originalEvent["sourceCapabilities"]["firesTouchEvents"]);
-	};
+	}
 	instanceProto.onMouseDown = function(info)
 	{
 		if (isCompatibilityMouseEvent(info))
@@ -24285,7 +24285,7 @@ cr.plugins_.Touch = function(runtime)
 			t.maybeTriggerHold(this, i);
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.OnTouchStart = function ()
 	{
 		return true;
@@ -24435,7 +24435,7 @@ cr.plugins_.Touch = function(runtime)
 		return this.runtime.testAndSelectCanvasPointOverlap(type, this.curTouchX, this.curTouchY, false);
 	};
 	pluginProto.cnds = new Cnds();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.TouchCount = function (ret)
 	{
 		ret.set_int(this.touches.length);
@@ -24859,8 +24859,8 @@ cr.plugins_.Touch = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.Twitter = function(runtime)
 {
 	this.runtime = runtime;
@@ -25028,11 +25028,11 @@ cr.plugins_.Twitter = function(runtime)
 				params
 			);
 		}
-	};
+	}
 	function triggerOnLoaded(self)
 	{
 		self.runtime.trigger(cr.plugins_.Twitter.prototype.cnds.OnLoaded, self);
-	};
+	}
 	instanceProto.saveToJSON = function ()
 	{
 		var o = {
@@ -25113,13 +25113,13 @@ cr.plugins_.Twitter = function(runtime)
 	instanceProto.drawGL = function(glw)
 	{
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.OnLoaded = function ()
 	{
 		return true;
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	/*
 	Acts.prototype.SetText = function (text)
 	{
@@ -25166,11 +25166,11 @@ cr.plugins_.Twitter = function(runtime)
 		this.updatePosition(true);
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.plugins_.XML = function(runtime)
 {
 	this.runtime = runtime;
@@ -25235,7 +25235,7 @@ cr.plugins_.XML = function(runtime)
 		}
 		catch (e) { return null; }
 	};
-	function Cnds() {};
+	function Cnds() {}
 	instanceProto.doForEachIteration = function (current_event, item)
 	{
 		this.nodeStack.push(item);
@@ -25277,7 +25277,7 @@ cr.plugins_.XML = function(runtime)
 		return false;
 	};
 	pluginProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Load = function (str)
 	{
 		if (this.runtime.isDomFree)
@@ -25325,7 +25325,7 @@ cr.plugins_.XML = function(runtime)
 		}
 	};
 	pluginProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.NumberValue = function (ret, xpath)
 	{
 		if (this.runtime.isDomFree)
@@ -25392,8 +25392,8 @@ cr.plugins_.XML = function(runtime)
 	};
 	pluginProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.Bullet = function(runtime)
 {
 	this.runtime = runtime;
@@ -25531,7 +25531,7 @@ cr.behaviors.Bullet = function(runtime)
 			}
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.CompareSpeed = function (cmp, s)
 	{
 		return cr.do_cmp(cr.distanceTo(0, 0, this.dx, this.dy), cmp, s);
@@ -25541,7 +25541,7 @@ cr.behaviors.Bullet = function(runtime)
 		return cr.do_cmp(this.travelled, cmp, d);
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetSpeed = function (s)
 	{
 		var a = cr.angleTo(0, 0, this.dx, this.dy);
@@ -25606,7 +25606,7 @@ cr.behaviors.Bullet = function(runtime)
 		this.enabled = (en === 1);
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.Speed = function (ret)
 	{
 		var s = cr.distanceTo(0, 0, this.dx, this.dy);
@@ -25631,8 +25631,8 @@ cr.behaviors.Bullet = function(runtime)
 	};
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.DragnDrop = function(runtime)
 {
 	this.runtime = runtime;
@@ -25755,7 +25755,7 @@ cr.behaviors.DragnDrop = function(runtime)
 				return inst.behavior_insts[i];
 		}
 		return null;
-	};
+	}
 	behaviorProto.onMouseDown = function (info)
 	{
 		if (info.which !== 1)
@@ -25995,7 +25995,7 @@ cr.behaviors.DragnDrop = function(runtime)
 	behinstProto.tick = function ()
 	{
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsDragging = function ()
 	{
 		return this.dragging;
@@ -26013,7 +26013,7 @@ cr.behaviors.DragnDrop = function(runtime)
 		return !!this.enabled;
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetEnabled = function (s)
 	{
 		this.enabled = (s !== 0);
@@ -26026,11 +26026,11 @@ cr.behaviors.DragnDrop = function(runtime)
 			this.onUp();
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.EightDir = function(runtime)
 {
 	this.runtime = runtime;
@@ -26354,7 +26354,7 @@ cr.behaviors.EightDir = function(runtime)
 			}
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsMoving = function ()
 	{
 		var speed = Math.sqrt(this.dx * this.dx + this.dy * this.dy);
@@ -26366,7 +26366,7 @@ cr.behaviors.EightDir = function(runtime)
 		return cr.do_cmp(speed, cmp, s);
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Stop = function ()
 	{
 		this.dx = 0;
@@ -26431,7 +26431,7 @@ cr.behaviors.EightDir = function(runtime)
 		this.dy = y_;
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.Speed = function (ret)
 	{
 		ret.set_float(Math.sqrt(this.dx * this.dx + this.dy * this.dy));
@@ -26462,8 +26462,8 @@ cr.behaviors.EightDir = function(runtime)
 	};
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.Fade = function(runtime)
 {
 	this.runtime = runtime;
@@ -26597,7 +26597,7 @@ cr.behaviors.Fade = function(runtime)
 			this.runtime.redraw = true;
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.OnFadeOutEnd = function ()
 	{
 		return true;
@@ -26611,7 +26611,7 @@ cr.behaviors.Fade = function(runtime)
 		return true;
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.StartFade = function ()
 	{
 		if (!this.activeAtStart && !this.setMaxOpacity)
@@ -26645,7 +26645,7 @@ cr.behaviors.Fade = function(runtime)
 		this.fadeOutTime = t;
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.FadeInTime = function (ret)
 	{
 		ret.set_float(this.fadeInTime);
@@ -26660,8 +26660,8 @@ cr.behaviors.Fade = function(runtime)
 	};
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.Flash = function(runtime)
 {
 	this.runtime = runtime;
@@ -26747,7 +26747,7 @@ cr.behaviors.Flash = function(runtime)
 			this.runtime.redraw = true;
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsFlashing = function ()
 	{
 		return this.timeleft > 0;
@@ -26757,7 +26757,7 @@ cr.behaviors.Flash = function(runtime)
 		return true;
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Flash = function (on_, off_, dur_)
 	{
 		this.ontime = on_;
@@ -26776,11 +26776,11 @@ cr.behaviors.Flash = function(runtime)
 		return;
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.Pin = function(runtime)
 {
 	this.runtime = runtime;
@@ -26854,7 +26854,7 @@ cr.behaviors.Pin = function(runtime)
 		else
 		{
 			this.pinObject = this.runtime.getObjectByUID(this.pinObjectUid);
-;
+
 		}
 		this.pinObjectUid = -1;
 	};
@@ -26909,13 +26909,13 @@ cr.behaviors.Pin = function(runtime)
 			this.inst.set_bbox_changed();
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsPinned = function ()
 	{
 		return !!this.pinObject;
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Pin = function (obj, mode_)
 	{
 		if (!obj)
@@ -26936,15 +26936,15 @@ cr.behaviors.Pin = function(runtime)
 		this.pinObject = null;
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.PinnedUID = function (ret)
 	{
 		ret.set_int(this.pinObject ? this.pinObject.uid : -1);
 	};
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.Platform = function(runtime)
 {
 	this.runtime = runtime;
@@ -27643,7 +27643,7 @@ cr.behaviors.Platform = function(runtime)
 			this.fallthrough--;
 		this.wasOverJumpthru = this.runtime.testOverlapJumpThru(this.inst);
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsMoving = function ()
 	{
 		return this.dx !== 0 || this.dy !== 0;
@@ -27753,7 +27753,7 @@ cr.behaviors.Platform = function(runtime)
 		return this.enableDoubleJump;
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetIgnoreInput = function (ignoring)
 	{
 		this.ignoreInput = ignoring;
@@ -27863,7 +27863,7 @@ cr.behaviors.Platform = function(runtime)
 		this.jumpSustain = s / 1000;		// convert to ms
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.Speed = function (ret)
 	{
 		ret.set_float(Math.sqrt(this.dx * this.dx + this.dy * this.dy));
@@ -27914,8 +27914,8 @@ cr.behaviors.Platform = function(runtime)
 	};
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.Rex_MoveTo = function(runtime)
 {
 	this.runtime = runtime;
@@ -28089,7 +28089,7 @@ cr.behaviors.Rex_MoveTo = function(runtime)
         this._moving_angle_info = o["ma"];
         this._last_tick = o["lt"];
 	};
-	function Cnds() {};
+	function Cnds() {}
 	behaviorProto.cnds = new Cnds();
 	Cnds.prototype.OnHitTarget = function ()
 	{
@@ -28115,7 +28115,7 @@ cr.behaviors.Rex_MoveTo = function(runtime)
         else
             return false;
 	};
-	function Acts() {};
+	function Acts() {}
 	behaviorProto.acts = new Acts();
 	Acts.prototype.SetActivated = function (s)
 	{
@@ -28166,7 +28166,7 @@ cr.behaviors.Rex_MoveTo = function(runtime)
 	{
         this.is_moving = false;
 	};
-	function Exps() {};
+	function Exps() {}
 	behaviorProto.exps = new Exps();
 	Exps.prototype.Activated = function (ret)
 	{
@@ -28203,8 +28203,8 @@ cr.behaviors.Rex_MoveTo = function(runtime)
 		ret.set_float(this.moving_angle_get());
 	};
 }());
-;
-;
+
+
 cr.behaviors.Rotate = function(runtime)
 {
 	this.runtime = runtime;
@@ -28260,9 +28260,9 @@ cr.behaviors.Rotate = function(runtime)
 			this.inst.set_bbox_changed();
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetSpeed = function (s)
 	{
 		this.speed = cr.to_radians(s);
@@ -28272,7 +28272,7 @@ cr.behaviors.Rotate = function(runtime)
 		this.acc = cr.to_radians(a);
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.Speed = function (ret)
 	{
 		ret.set_float(cr.to_degrees(this.speed));
@@ -28283,8 +28283,8 @@ cr.behaviors.Rotate = function(runtime)
 	};
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.Sin = function(runtime)
 {
 	this.runtime = runtime;
@@ -28400,7 +28400,7 @@ cr.behaviors.Sin = function(runtime)
 			this.initialValue2 = this.inst.y;
 			break;
 		default:
-;
+
 		}
 		this.lastKnownValue = this.initialValue;
 		this.lastKnownValue2 = this.initialValue2;
@@ -28424,7 +28424,7 @@ cr.behaviors.Sin = function(runtime)
 			return -2 * x / _2pi + 1;
 		case 4:		// square
 			return x < Math.PI ? -1 : 1;
-		};
+		}
 		return 0;
 	};
 	behinstProto.tick = function ()
@@ -28507,7 +28507,7 @@ cr.behaviors.Sin = function(runtime)
 			break;
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsActive = function ()
 	{
 		return this.active;
@@ -28532,7 +28532,7 @@ cr.behaviors.Sin = function(runtime)
 		return this.wave === w;
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetActive = function (a)
 	{
 		this.active = (a === 1);
@@ -28568,7 +28568,7 @@ cr.behaviors.Sin = function(runtime)
 		this.init();
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.CyclePosition = function (ret)
 	{
 		ret.set_float(this.i / _2pi);
@@ -28590,8 +28590,8 @@ cr.behaviors.Sin = function(runtime)
 	};
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.Timer = function(runtime)
 {
 	this.runtime = runtime;
@@ -28695,7 +28695,7 @@ cr.behaviors.Timer = function(runtime)
 			}
 		}
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.OnTimer = function (tag_)
 	{
 		tag_ = tag_.toLowerCase();
@@ -28705,7 +28705,7 @@ cr.behaviors.Timer = function(runtime)
 		return t.current.sum >= t.duration;
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.StartTimer = function (duration_, type_, tag_)
 	{
 		this.timers[tag_.toLowerCase()] = {
@@ -28722,7 +28722,7 @@ cr.behaviors.Timer = function(runtime)
 			delete this.timers[tag_];
 	};
 	behaviorProto.acts = new Acts();
-	function Exps() {};
+	function Exps() {}
 	Exps.prototype.CurrentTime = function (ret, tag_)
 	{
 		var t = this.timers[tag_.toLowerCase()];
@@ -28740,8 +28740,8 @@ cr.behaviors.Timer = function(runtime)
 	};
 	behaviorProto.exps = new Exps();
 }());
-;
-;
+
+
 cr.behaviors.scrollto = function(runtime)
 {
 	this.runtime = runtime;
@@ -28804,7 +28804,7 @@ cr.behaviors.scrollto = function(runtime)
 				return binst;
 		}
 		return null;
-	};
+	}
 	behinstProto.tick2 = function ()
 	{
 		if (!this.enabled)
@@ -28837,7 +28837,7 @@ cr.behaviors.scrollto = function(runtime)
 		layout.scrollToX(sumx / count + offx);
 		layout.scrollToY(sumy / count + offy);
 	};
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.Shake = function (mag, dur, mode)
 	{
 		this.behavior.shakeMag = mag;
@@ -28851,8 +28851,8 @@ cr.behaviors.scrollto = function(runtime)
 	};
 	behaviorProto.acts = new Acts();
 }());
-;
-;
+
+
 cr.behaviors.solid = function(runtime)
 {
 	this.runtime = runtime;
@@ -28885,13 +28885,13 @@ cr.behaviors.solid = function(runtime)
 	behinstProto.tick = function ()
 	{
 	};
-	function Cnds() {};
+	function Cnds() {}
 	Cnds.prototype.IsEnabled = function ()
 	{
 		return this.inst.extra["solidEnabled"];
 	};
 	behaviorProto.cnds = new Cnds();
-	function Acts() {};
+	function Acts() {}
 	Acts.prototype.SetEnabled = function (e)
 	{
 		this.inst.extra["solidEnabled"] = !!e;
