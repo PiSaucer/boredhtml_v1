@@ -57,6 +57,16 @@ ul {
     text-align: left;
 }
 
+a,
+a:visited,
+a:active {
+    color: #0984e3;
+}
+
+a:hover {
+    color: #74b9ff;
+}
+
 #gameFinder {
     background-image: url('searchicon.png');
     background-position: 10px 12px;
@@ -78,4 +88,12 @@ ul {
     border: 0 none;
     background: transparent;
     margin: 0 auto;
+}
+
+.ver {
+    text-align: left !important;
+}
+
+.ver a {
+    color: inherit;
 }
