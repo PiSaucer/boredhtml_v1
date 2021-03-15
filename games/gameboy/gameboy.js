@@ -847,7 +847,7 @@ ExtRam.prototype.manageRead = function(offset) {
 };
 
 ExtRam.prototype.getStorageKey = function() {
-    return this.gameName + '_EXTRAM';;
+    return this.gameName + '_EXTRAM';
 };
 // Actually save the RAM in the physical storage (localStorage)
 ExtRam.prototype.saveRamData = function() {
@@ -2403,7 +2403,7 @@ function validate(data) {
         hash = hash - data[i] - 1;
     }
     return (hash & 0xFF) == data[0x14D];
-};
+}
 
 GameboyJS.Rom = Rom;
 }(GameboyJS || (GameboyJS = {})));
