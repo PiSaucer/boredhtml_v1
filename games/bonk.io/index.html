@@ -38,28 +38,40 @@
 </head>
 
 <body>
-    <a href="../../index.html" style="color: black;">
-        <img src="../../images/logo.png" class="logo" alt="logo" height="42" width="42">
-        <h1>
-            Bored In School Right Now Inc HTML
-        </h1>
-    </a>
+    <div class="header">
+        <a href="../../">
+            <img src="../../images/logo.png" class="logo" alt="logo" height="42" width="42">
+            <h1>
+                Bored In School Right Now Inc HTML
+            </h1>
+        </a>
+    </div>
     <hr>
     <h2>
         Bonk.io
     </h2>
     <hr>
-    <iframe src="silvergames.com/en/bonkio/iframe.html" height="100%" width="100%" frameBorder="0" scrolling="no" onload="this.style.display='block';">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Bonk.io</li>
+        </ol>
+    </nav>
+    <hr>
+    <iframe src="silvergames.com/en/bonkio/iframe.html" height="800px" width="100%" frameBorder="0" scrolling="no" onload="this.style.display='block';">
 	  </iframe>
 
 
     <footer>
         <hr>
         <p>"Stay Bored My Dudes"</p>
-        <p class="email_footer">Email: <a href="#">boredinschoolrightnowinc@googlegroups.com</a></p>
-        <p><strong>I DO NOT OWN THESE GAMES</strong></p>
+        <p class="email_footer">Email: <a href="mailto:boredinschoolrightnowinc@googlegroups">boredinschoolrightnowinc@googlegroups.com</a></p>
+        <p class="email_footer">assistance email <a href="mailto:portablemc@hackermail.com">portablemc@hackermail.com</a></p>
+        <p><strong>I DO NOT OWN THESE GAMES</strong></a>
+        </p>
         <p>*May Not Work At all schools</p>
     </footer>
+    <script src="../../ruffle/ruffle.js"></script>
 </body>
 
 </html>
