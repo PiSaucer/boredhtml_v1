@@ -13,28 +13,25 @@
 ## Getting Started
 
 ### Prerequisites
-What things you need to run the software:
-
-- Web Browser
-- Python 3.X.X
-- PHP
-- js
-- node.js
 
 **Just anyway to host the website**
 
+What things you need to run the software:
+
+- Web Browser
+- Either Node.js or Python3 for local hosting
+
 What I am Using:
 
-- Chrome 88.0.4324.190 (Official Build) (64-bit)
-- js build-in with Chrome
-- Python 3.X
-- PHP 7.X.X
-- node.js v12.X.X
-- firebase
+- Chrome (web browser of choice)
+- Node.js (for local testing)
+- Firebase (for hosting)
+- GitHub (for hosting)
+- vscode (text editor of choice)
 
-### Installing
+### How to Host Locally
 
-#### first way of installing with python - not recommend
+#### Node.js - Personal Preference
 
 Step 1: Go to [Clone or download](https://github.com/PiSaucer/boredhtml/archive/master.zip)
 
@@ -46,24 +43,20 @@ Step 4: Open your Command Prompt or Terminal
 
 Step 5: Go to your directory (where you unzip the files)
 
-Step 6: Get your IP address and keep a note of it
-
-Step 7: Run a local host with python
+Step 6: Type these commands in the Command Prompt or Terminal
 
 ```
-On Python 3:
-python -m http.server
+$ npm install http-server -g
+
+http-server
 ```
 
-Step 8: Go to your localhost
+Step 7: Go to [localhost:8080](localhost:8080)
 
-Step 9: It should start loading
+Step 8: You're Done!!!
 
-Step 10: You're Done!!!
 
-(optional) Step 11: Run this on a server with python and php enable to show to the whole world
-
-#### new better way of Installing
+#### Python3 - Not Recommended 
 
 Step 1: Go to [Clone or download](https://github.com/PiSaucer/boredhtml/archive/master.zip)
 
@@ -78,28 +71,16 @@ Step 5: Go to your directory (where you unzip the files)
 Step 6: Type this in the Command Prompt or Terminal
 
 ```
-$ npm install http-server -g
+python -m http.server
 ```
 
-```
-http-server
-```
+Step 7: Go to [localhost:8000](localhost:8000)
 
-Step 8: Go to your localhost:8080
-
-Step 9: It should start loading
-
-Step 10: You're Done!!!
+Step 8: You're Done!!!
 
 
 ## Version
 - VER 0.17.5-PRE-ALPHA
-
-## Built With
-- Atom
-- Notepad++
-- node.js
-- vscode
 
 ## Contributing
 
@@ -111,7 +92,6 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - **[yeetedmeme](https://github.com/yeetedmeme)** - Minecraft bypass creator and adder of some other sites
 
 See also the list of other [contributors](https://github.com/PiSaucer/boredhtml/contributors) who participated in this project.
-
 
 ## License
 
