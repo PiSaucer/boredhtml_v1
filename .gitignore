@@ -97,7 +97,7 @@ dist
 .serverless/
 
 # FuseBox cache
-.fusebox/
+.fusebox/ 
 
 # DynamoDB Local files
 .dynamodb/
@@ -115,4 +115,5 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# Mac
 .DS_Store
