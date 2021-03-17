@@ -97,3 +97,7 @@ a:hover {
 .ver a {
     color: inherit;
 }
+
+.material-icons {
+    font-size: 10px !important;
+}
