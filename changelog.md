@@ -11,9 +11,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [VER 0.18.0-PRE-ALPHA] - 2021-03-17
+### Added 
+- Breadcrumbs to every page
+- Ruffle was added to every flash game
+- All flash games added from the flash website with some more games
+- New head information, header, footer
+- Rename *.html files into index.html to allow a clearer url
+- More domains
+
+### Removed
+- Old websites that don't exist anymore
+- Old proxy methods that don't exist anymore
+
 ## [VER 0.17.6-PRE-ALPHA] - 2021-02-27
 
-## Removed
+### Removed
 - unneeded files
 
 ## [VER 0.17.5-PRE-ALPHA] - 2020-12-23

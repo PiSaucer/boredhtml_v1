@@ -1,7 +1,7 @@
 
 # Bored In School Right Now Inc HTML
 
-![version name](https://img.shields.io/badge/version-VER%200.17.5--PRE--ALPHA-blue)
+![version name](https://img.shields.io/badge/version-VER%200.18.0--PRE--ALPHA-blue)
 
 ## Demos
 - [pisaucer.github.io/boredhtml/](https://pisaucer.github.io/boredhtml/)
@@ -80,7 +80,7 @@ Step 8: You're Done!!!
 
 
 ## Version
-- VER 0.17.5-PRE-ALPHA
+- VER 0.18.0-PRE-ALPHA
 
 ## Contributing
 
