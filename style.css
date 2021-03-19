@@ -4,6 +4,7 @@ body {
     word-spacing: 2px;
     margin-left: 50px !important;
     text-align: center;
+    overflow-wrap: break-word;
 }
 
 footer {
