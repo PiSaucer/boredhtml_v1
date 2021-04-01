@@ -349,6 +349,30 @@
         </p>
         <p>*May Not Work At all schools</p>
     </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBZfMox9Ie9Oid9hH5Ww35k4BBrzQScllQ",
+            authDomain: "boredhtml.firebaseapp.com",
+            databaseURL: "https://boredhtml.firebaseio.com",
+            projectId: "boredhtml",
+            storageBucket: "boredhtml.appspot.com",
+            messagingSenderId: "463915488464",
+            appId: "1:463915488464:web:acc601236def8143f2bad5",
+            measurementId: "G-5G6R84NZNB"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 </body>
 
 </html>
