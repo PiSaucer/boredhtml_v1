@@ -5,11 +5,7 @@
 
 ## Demos
 - [pisaucer.github.io/boredhtml/](https://pisaucer.github.io/boredhtml/)
-- [boredhtml.web.app](https://boredhtml.web.app/)
-- [boredhtml.firebaseapp.com](https://boredhtml.firebaseapp.com/)
-- [boredhtml.ml](https://boredhtml.ml/)
 - [boredht.ml](https://boredht.ml/)
-- [boredinschoolrightnow.ml](https://boredinschoolrightnow.ml/)
 
 ## Getting Started
 
