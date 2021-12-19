@@ -11,6 +11,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [VER 0.19.0-PRE-ALPHA] - 2021-12-19
+### Changed 
+- Uses jsDelivr to serve files from GitHub to not hit the download limit
+- Updated Ruffle to 12.19.2021
+- Move doom and doom2 into dooms folder
+- Download BTN
+- Updated Bootstrap
+
 ## [VER 0.18.0-PRE-ALPHA] - 2021-03-17
 ### Added 
 - Breadcrumbs to every page
