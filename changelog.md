@@ -11,6 +11,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [VER 0.19.1-PRE-ALPHA] - 2021-12-19
+### Changed 
+- Uses cdn.boredht.ml which is covered version of jsDelivr
+    - Bootstrap 5 min
+    - main min style
+    - dosbox
+    - favicon
+
 ## [VER 0.19.0-PRE-ALPHA] - 2021-12-19
 ### Changed 
 - Uses jsDelivr to serve files from GitHub to not hit the download limit
