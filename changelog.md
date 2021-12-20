@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [VER 0.19.2-PRE-ALPHA] - 2021-12-19
+### Removed 
+- The word "INC" on every page
+
 ## [VER 0.19.1-PRE-ALPHA] - 2021-12-19
 ### Changed 
 - Uses cdn.boredht.ml which is covered version of jsDelivr
