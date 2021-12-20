@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - main min style
     - dosbox
     - favicon
+    - ruffle
 
 ## [VER 0.19.0-PRE-ALPHA] - 2021-12-19
 ### Changed 
