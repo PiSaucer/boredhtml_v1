@@ -7,12 +7,13 @@
   [![license](https://badgen.net/github/license/pisaucer/boredhtml)](LICENSE)
   ![loc](https://tokei.rs/b1/github/PiSaucer/boredhtml)
   [![commits](https://badgen.net/github/commits/pisaucer/boredhtml/)](https://github.com/PiSaucer/boredhtml/commits/master)
-    ![last commit](https://badgen.net/github/last-commit/pisaucer/boredhtml)
+   ![last commit](https://badgen.net/github/last-commit/pisaucer/boredhtml)
   [![forks](https://img.shields.io/github/forks/pisaucer/boredhtml.svg)](https://github.com/pisaucer/boredhtml/network/members)
   ![size](https://github-size-badge.herokuapp.com/pisaucer/boredhtml.svg)
   [![contributors](https://img.shields.io/github/contributors/pisaucer/boredhtml)](https://github.com/pisaucer/boredhtml/graphs/contributors)
   [![CodeFactor](https://www.codefactor.io/repository/github/pisaucer/boredhtml/badge)](https://www.codefactor.io/repository/github/pisaucer/boredhtml)
   [![Deploy to Firebase Hosting](https://github.com/PiSaucer/boredhtml/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/PiSaucer/boredhtml/actions/workflows/firebase-hosting-merge.yml)
+  ![daily badge](https://bored-entertainment.github.io/cdn-badge/badge-day.svg)
   [![discord](https://img.shields.io/badge/Discord-7qTNdXd?logo=discord&logoColor=white&color=5865F2)](https://discord.com/invite/7qTNdXd)
 
 </div>
