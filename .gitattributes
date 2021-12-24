@@ -8,4 +8,8 @@
 *.md linguist-detectable=false
 bootstrap/** linguist-detectable=false
 ruffle/** linguist-detectable=false
+dosbox/** linguist-detectable=false
 games/solitude/jqueryui/** linguist-detectable=false
+games/2048/style/** linguist-detectable=false
+games/2048/js/** linguist-detectable=false
+game.html linguist-detectable=false
