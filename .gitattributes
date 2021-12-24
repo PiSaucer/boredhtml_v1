@@ -1,0 +1,3 @@
+*.swf linguist-detectable=false
+/games/*.js linguist-detectable=false
+/games/*.css linguist-detectable=false
