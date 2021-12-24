@@ -15,6 +15,7 @@ dosbox/** linguist-detectable=false
 games/solitude/jqueryui/** linguist-detectable=false
 games/2048/style/** linguist-detectable=false
 games/2048/js/** linguist-detectable=false
+games/*.js linguist-detectable=false
 
 # File Names
 game.html linguist-detectable=false
