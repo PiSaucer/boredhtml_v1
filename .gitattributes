@@ -25,4 +25,6 @@ dosbox/** linguist-detectable=false
 game.html linguist-detectable=false
 iframe.html linguist-detectable=false
 test.html linguist-detectable=false
-THERE IS NO GAME.html linguist-detectable=false
+
+# Misc
+games/thereisnogame/repo/alternate/871000/** linguist-detectable=false
