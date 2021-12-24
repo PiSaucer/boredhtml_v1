@@ -1,3 +1,11 @@
 *.swf linguist-detectable=false
-/games/*.js linguist-detectable=false
-/games/*.css linguist-detectable=false
+*.bat linguist-detectable=false
+*.vbs linguist-detectable=false
+*.xml linguist-detectable=false
+*.svg linguist-detectable=false
+*.json linguist-detectable=false
+*.txt linguist-detectable=false
+*.md linguist-detectable=false
+bootstrap/** linguist-detectable=false
+ruffle/** linguist-detectable=false
+games/solitude/jqueryui/** linguist-detectable=false
