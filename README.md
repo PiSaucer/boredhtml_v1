@@ -1,95 +1,81 @@
+<div align="center" style="display: block; margin-left: auto; margin-right: auto;">  
+  
+  <img align="left" src="images/logo.png" alt="logo" height="42" width="42">
+  <h1>Bored In School Right Now HTML</h1>
 
-# Bored In School Right Now Inc HTML
+  [![version](https://shields.io/github/v/release/pisaucer/boredhtml)](https://github.com/PiSaucer/boredhtml/releases)
+  [![license](https://badgen.net/github/license/pisaucer/boredhtml)](LICENSE)
+  ![loc](https://tokei.rs/b1/github/PiSaucer/boredhtml)
+  [![commits](https://badgen.net/github/commits/pisaucer/boredhtml/)](https://github.com/PiSaucer/boredhtml/commits/master)
+  [![forks](https://img.shields.io/github/forks/pisaucer/boredhtml.svg)](https://github.com/pisaucer/boredhtml/network/members)
+  ![size](https://github-size-badge.herokuapp.com/pisaucer/boredhtml.svg)
+  ![last commit](https://badgen.net/github/last-commit/pisaucer/boredhtml)
+  [![contributors](https://img.shields.io/github/contributors/pisaucer/boredhtml)](https://github.com/pisaucer/boredhtml/graphs/contributors)
+  [![discord](https://img.shields.io/badge/Discord-7qTNdXd?logo=discord&logoColor=white&color=5865F2)](https://discord.com/invite/7qTNdXd)
 
-![version name](https://img.shields.io/badge/version-VER%200.19.2--PRE--ALPHA-blue)
+</div>
 
 ## Demos
-- [pisaucer.github.io/boredhtml/](https://pisaucer.github.io/boredhtml/)
+*(Ordered in best to worst)*
 - [boredht.ml](https://boredht.ml/)
+- [pisaucer.github.io/boredhtml/](https://pisaucer.github.io/boredhtml/)
+- [boredinschoolrightnow.ml](https://boredinschoolrightnow.ml/)
+
+## Built with
+- [Bootstrap](https://getbootstrap.com)
+- [JQuery](https://jquery.com)
 
 ## Getting Started
 
-### Prerequisites
+**Anyway to host a website**
 
-**Just anyway to host the website**
-
-What things you need to run the software:
-
+Tools required:
 - Web Browser
-- Either Node.js or Python3 for local hosting
+- Any method of hosting
 
-What I am Using:
+What I use for local hosting:
+- [vscode](https://code.visualstudio.com/download) (text editor of choice)
+- [Node.js](https://nodejs.org/en/download/) (for local testing)
+- [Chrome](https://chrome.google.com/) (web browser of choice)
+- [Firebase](https://firebase.com/) (for hosting)
+- [GitHub](https://desktop.github.com/) (for version control)
 
-- Chrome (web browser of choice)
-- Node.js (for local testing)
-- Firebase (for hosting)
-- GitHub (for hosting)
-- vscode (text editor of choice)
-
-### How to Host Locally
-
-#### Node.js - Personal Preference
+## How I Host Locally
+*I use macOS and Windows 11*
 
 Step 1: Go to [Clone or download](https://github.com/PiSaucer/boredhtml/archive/master.zip)
 
-Step 2: Unzip the file
+Step 2: Unzip the repo
 
 Step 3: Keep note where you unzipped at (the directory)
 
-Step 4: Open your Command Prompt or Terminal
+Step 4: Open your Command Prompt, Terminal, etc
 
 Step 5: Go to your directory (where you unzip the files)
 
-Step 6: Type these commands in the Command Prompt or Terminal
+Step 6: Install [http-server](https://www.npmjs.com/package/http-server) with npm (or yarn):
 
 ```
-$ npm install http-server -g
-
-http-server
+npm install http-server -g
 ```
 
-Step 7: Go to [localhost:8080](localhost:8080)
+Step 7: Run ```http-server```
 
-Step 8: You're Done!!!
+Step 8: Go to [localhost:8080](http://localhost:8080) in chrome.
 
-
-#### Python3 - Not Recommended 
-
-Step 1: Go to [Clone or download](https://github.com/PiSaucer/boredhtml/archive/master.zip)
-
-Step 2: Unzip the file
-
-Step 3: Keep note where you unzipped at (the directory)
-
-Step 4: Open your Command Prompt or Terminal
-
-Step 5: Go to your directory (where you unzip the files)
-
-Step 6: Type this in the Command Prompt or Terminal
-
-```
-python -m http.server
-```
-
-Step 7: Go to [localhost:8000](localhost:8000)
-
-Step 8: You're Done!!!
-
-
-## Version
-- VER 0.18.0-PRE-ALPHA
+Step 9: Make changes in vscode and push to GitHub.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Pull requests are welcome. If you find any problem(s) in boredhtml, feel free to submit an issue. This includes stuff like vulnerabilities, or even the most trivial issues (such as typoes.) If you know how to fix an issue, feel free to make a pull request for the issue. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our [code of conduct](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us. If you would like to suggest a feature or change, submit it as an issue as well or message us on [discord](https://discord.com/invite/7qTNdXd); it will be given the appropriate tag once we have seen it. We love to discuss any major changes with you.
 
 ## Authors
 
-- **[PiSaucer](https://github.com/PiSaucer)** - *Initial work*
-- **[yeetedmeme](https://github.com/yeetedmeme)** - Minecraft bypass creator and adder of some other sites
+- **[PiSaucer](https://github.com/PiSaucer)** - *Initial work* and created majority of the site
+- **[greymesa](https://github.com/greymesa)** - [Portable Minecraft](https://github.com/portablemc/portablemc) creator and linked some more sites
 
 See also the list of other [contributors](https://github.com/PiSaucer/boredhtml/contributors) who participated in this project.
 
-## License
+## License ![badge](https://badgen.net/github/license/pisaucer/boredhtml)
 
-MIT
+Our [`LICENSE`](LICENSE) file is based off of the [MIT License](https://choosealicense.com/licenses/mit/).
