@@ -1,3 +1,4 @@
+# File Ext
 *.swf linguist-detectable=false
 *.bat linguist-detectable=false
 *.vbs linguist-detectable=false
@@ -6,10 +7,17 @@
 *.json linguist-detectable=false
 *.txt linguist-detectable=false
 *.md linguist-detectable=false
+
+# Dir
 bootstrap/** linguist-detectable=false
 ruffle/** linguist-detectable=false
 dosbox/** linguist-detectable=false
 games/solitude/jqueryui/** linguist-detectable=false
 games/2048/style/** linguist-detectable=false
 games/2048/js/** linguist-detectable=false
+
+# File Names
 game.html linguist-detectable=false
+iframe.html linguist-detectable=false
+test.html linguist-detectable=false
+THERE IS NO GAME.html linguist-detectable=false
