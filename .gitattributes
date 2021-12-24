@@ -28,3 +28,5 @@ test.html linguist-detectable=false
 
 # Misc
 games/thereisnogame/repo/alternate/871000/** linguist-detectable=false
+games/cookieclicker/** linguist-detectable=false
+games/bonk.io/silvergames.com/** linguist-detectable=false
