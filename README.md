@@ -11,6 +11,7 @@
   ![size](https://github-size-badge.herokuapp.com/pisaucer/boredhtml.svg)
   ![last commit](https://badgen.net/github/last-commit/pisaucer/boredhtml)
   [![contributors](https://img.shields.io/github/contributors/pisaucer/boredhtml)](https://github.com/pisaucer/boredhtml/graphs/contributors)
+  [![CodeFactor](https://www.codefactor.io/repository/github/pisaucer/boredhtml/badge)](https://www.codefactor.io/repository/github/pisaucer/boredhtml)
   [![discord](https://img.shields.io/badge/Discord-7qTNdXd?logo=discord&logoColor=white&color=5865F2)](https://discord.com/invite/7qTNdXd)
 
 </div>
@@ -74,6 +75,7 @@ Pull requests are welcome. If you find any problem(s) in boredhtml, feel free to
 
 - **[PiSaucer](https://github.com/PiSaucer)** - *Initial work* and created majority of the site
 - **[greymesa](https://github.com/greymesa)** - [Portable Minecraft](https://github.com/portablemc/portablemc) creator and linked some more sites
+- **[codefactor](https://github.com/code-factor)** - Checks quality of code
 
 See also the list of other [contributors](https://github.com/PiSaucer/boredhtml/contributors) who participated in this project.
 
