@@ -13,7 +13,7 @@
   [![contributors](https://img.shields.io/github/contributors/pisaucer/boredhtml)](https://github.com/pisaucer/boredhtml/graphs/contributors)
   [![CodeFactor](https://www.codefactor.io/repository/github/pisaucer/boredhtml/badge)](https://www.codefactor.io/repository/github/pisaucer/boredhtml)
   [![Deploy to Firebase Hosting](https://github.com/PiSaucer/boredhtml/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/PiSaucer/boredhtml/actions/workflows/firebase-hosting-merge.yml)
-  ![daily badge](https://bored-entertainment.github.io/cdn-badge/badge-day.svg)
+  ![daily badge](https://badges.boredht.ml/bored/day.svg)
   [![discord](https://img.shields.io/badge/Discord-7qTNdXd?logo=discord&logoColor=white&color=5865F2)](https://discord.com/invite/7qTNdXd)
 
 </div>
