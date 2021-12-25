@@ -3,6 +3,7 @@
   <img align="left" src="images/logo.png" alt="logo" height="42" width="42">
   <h1>Bored In School Right Now HTML</h1>
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/83aa6e8a07f240408bcafd3dfde3b43c)](https://app.codacy.com/gh/PiSaucer/boredhtml?utm_source=github.com&utm_medium=referral&utm_content=PiSaucer/boredhtml&utm_campaign=Badge_Grade_Settings)
   [![version](https://shields.io/github/v/release/pisaucer/boredhtml)](https://github.com/PiSaucer/boredhtml/releases)
   [![license](https://badgen.net/github/license/pisaucer/boredhtml)](LICENSE)
   ![loc](https://tokei.rs/b1/github/PiSaucer/boredhtml)
