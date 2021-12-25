@@ -9,7 +9,7 @@
   [![commits](https://badgen.net/github/commits/pisaucer/boredhtml/)](https://github.com/PiSaucer/boredhtml/commits/master)
    ![last commit](https://badgen.net/github/last-commit/pisaucer/boredhtml)
   [![forks](https://img.shields.io/github/forks/pisaucer/boredhtml.svg)](https://github.com/pisaucer/boredhtml/network/members)
-  ![size](https://github-size-badge.herokuapp.com/pisaucer/boredhtml.svg)
+  ![size](https://img.shields.io/github/repo-size/pisaucer/boredhtml?color=green)
   [![contributors](https://img.shields.io/github/contributors/pisaucer/boredhtml)](https://github.com/pisaucer/boredhtml/graphs/contributors)
   [![CodeFactor](https://www.codefactor.io/repository/github/pisaucer/boredhtml/badge)](https://www.codefactor.io/repository/github/pisaucer/boredhtml)
   [![Deploy to Firebase Hosting](https://github.com/PiSaucer/boredhtml/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/PiSaucer/boredhtml/actions/workflows/firebase-hosting-merge.yml)
