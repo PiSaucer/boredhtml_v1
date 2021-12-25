@@ -5,16 +5,15 @@
 
   [![version](https://shields.io/github/v/release/pisaucer/boredhtml)](https://github.com/PiSaucer/boredhtml/releases)
   [![license](https://badgen.net/github/license/pisaucer/boredhtml)](LICENSE)
-  ![loc](https://tokei.rs/b1/github/PiSaucer/boredhtml)
   [![commits](https://badgen.net/github/commits/pisaucer/boredhtml/)](https://github.com/PiSaucer/boredhtml/commits/master)
    ![last commit](https://badgen.net/github/last-commit/pisaucer/boredhtml)
   [![forks](https://img.shields.io/github/forks/pisaucer/boredhtml.svg)](https://github.com/pisaucer/boredhtml/network/members)
-  ![size](https://img.shields.io/github/repo-size/pisaucer/boredhtml?color=green)
   [![contributors](https://img.shields.io/github/contributors/pisaucer/boredhtml)](https://github.com/pisaucer/boredhtml/graphs/contributors)
+  ![size](https://img.shields.io/github/repo-size/pisaucer/boredhtml?color=green)
   [![CodeFactor](https://www.codefactor.io/repository/github/pisaucer/boredhtml/badge)](https://www.codefactor.io/repository/github/pisaucer/boredhtml)
   [![Codacy Badge](https://app.codacy.com/project/badge/Grade/61a513b5800d424c858adbae84b4a17b)](https://www.codacy.com/gh/PiSaucer/boredhtml/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PiSaucer/boredhtml&amp;utm_campaign=Badge_Grade)
-  [![Deploy to Firebase Hosting](https://github.com/PiSaucer/boredhtml/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/PiSaucer/boredhtml/actions/workflows/firebase-hosting-merge.yml)
-  ![daily badge](https://badges.boredht.ml/bored/day.svg)
+  ![monthly badge](https://badges.boredht.ml/bored/month.svg)
+  ![lines of code](https://badges.boredht.ml/bored/loc.svg)
   [![discord](https://img.shields.io/badge/Discord-7qTNdXd?logo=discord&logoColor=white&color=5865F2)](https://discord.com/invite/7qTNdXd)
 
 </div>
