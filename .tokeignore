@@ -1,0 +1,32 @@
+# All Game js and css
+games/**/*.js
+games/**/*.css
+
+# All Videos js and css
+videos/**/*.js
+videos/**/*.css
+
+# File Ext
+*.swf
+*.bat
+*.vbs
+*.xml
+*.svg
+*.json
+*.txt
+*.md
+
+# Dependencies Dir
+bootstrap/**
+ruffle/**
+dosbox/**
+
+# Certain File Names
+game.html
+iframe.html
+test.html
+
+# Misc
+games/thereisnogame/repo/alternate/871000/**
+games/cookieclicker/**
+games/bonk.io/silvergames.com/**
