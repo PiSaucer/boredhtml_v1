@@ -22,6 +22,7 @@
 *(Ordered in best to worst)*
 - [boredht.ml](https://boredht.ml/)
 - [pisaucer.github.io/boredhtml/](https://pisaucer.github.io/boredhtml/)
+- [boredhtml.netlify.app](https://boredhtml.netlify.app/)
 - [boredinschoolrightnow.ml](https://boredinschoolrightnow.ml/)
 
 ## Built with
