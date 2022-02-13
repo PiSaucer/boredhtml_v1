@@ -5,14 +5,7 @@ body {
     margin-left: 50px !important;
     text-align: center;
     overflow-wrap: break-word;
-    background-color: white;
-    color: black;
 }
-
-.dark-mode {
-    background-color: #121212;
-    color: white;
-  }
 
 footer {
     text-align: center;
