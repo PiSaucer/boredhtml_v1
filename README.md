@@ -23,6 +23,7 @@
 - [boredht.ml/v1/](https://boredht.ml/v1/)
 - [pisaucer.github.io/boredhtml_v1/](https://pisaucer.github.io/boredhtml_v1/)
 - [boredhtml-v1.netlify.app](https://boredhtml-v1.netlify.app/)
+- [boredhtml-v1.pisaucer.ml](http://boredhtml-v1.pisaucer.ml/)
 
 ## Built with
 - [Bootstrap](https://getbootstrap.com)
