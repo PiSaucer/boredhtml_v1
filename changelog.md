@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [VER 1.0.0] - 2023-01-27
+### Changed 
+- Keeping this repo separate to a new version at [pisaucer/boredhtml](https://github.com/PiSaucer/boredhtml/) this project has been renamed to [PiSaucer/boredhtml_v1](https://github.com/PiSaucer/boredhtml_v1) and still accessible at [boredht.ml/v1](https://boredht.ml/v1/)
+
 ## [VER 0.19.2-PRE-ALPHA] - 2021-12-19
 ### Removed 
 - The word "INC" on every page
