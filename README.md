@@ -20,10 +20,9 @@
 
 ## Demos
 *(Ordered in best to worst)*
-- [boredht.ml](https://boredht.ml/)
-- [pisaucer.github.io/boredhtml/](https://pisaucer.github.io/boredhtml/)
-- [boredhtml.netlify.app](https://boredhtml.netlify.app/)
-- [boredinschoolrightnow.ml](https://boredinschoolrightnow.ml/)
+- [boredht.ml/v1/](https://boredht.ml/v1/)
+- [pisaucer.github.io/boredhtml_v1/](https://pisaucer.github.io/boredhtml_v1/)
+- [boredhtml-v1.netlify.app](https://boredhtml-v1.netlify.app/)
 
 ## Built with
 - [Bootstrap](https://getbootstrap.com)
