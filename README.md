@@ -1,7 +1,7 @@
 <div align="center" style="display: block; margin-left: auto; margin-right: auto;">  
   
   <img align="left" src="images/logo.png" alt="logo" height="42" width="42">
-  <h1>Bored In School Right Now HTML</h1>
+  <h1>Bored In School Right Now HTML_v1</h1>
 
   [![version](https://shields.io/github/v/release/pisaucer/boredhtml_v1)](https://github.com/PiSaucer/boredhtml_v1/releases)
   [![license](https://badgen.net/github/license/pisaucer/boredhtml_v1)](LICENSE)
