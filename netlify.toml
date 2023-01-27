@@ -1,0 +1,6 @@
+# netlify.toml
+[[redirects]]
+from = "/v1/*"
+to = "boredhtml.netlify.app/:splat"
+status = 200
+force = true
