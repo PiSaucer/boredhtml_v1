@@ -3,17 +3,17 @@
   <img align="left" src="images/logo.png" alt="logo" height="42" width="42">
   <h1>Bored In School Right Now HTML</h1>
 
-  [![version](https://shields.io/github/v/release/pisaucer/boredhtml)](https://github.com/PiSaucer/boredhtml/releases)
-  [![license](https://badgen.net/github/license/pisaucer/boredhtml)](LICENSE)
-  [![commits](https://badgen.net/github/commits/pisaucer/boredhtml/)](https://github.com/PiSaucer/boredhtml/commits/master)
-   ![last commit](https://badgen.net/github/last-commit/pisaucer/boredhtml)
-  [![forks](https://img.shields.io/github/forks/pisaucer/boredhtml.svg)](https://github.com/pisaucer/boredhtml/network/members)
-  [![contributors](https://img.shields.io/github/contributors/pisaucer/boredhtml)](https://github.com/pisaucer/boredhtml/graphs/contributors)
-  ![size](https://img.shields.io/github/repo-size/pisaucer/boredhtml?color=green)
-  [![CodeFactor](https://www.codefactor.io/repository/github/pisaucer/boredhtml/badge)](https://www.codefactor.io/repository/github/pisaucer/boredhtml)
-  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/61a513b5800d424c858adbae84b4a17b)](https://www.codacy.com/gh/PiSaucer/boredhtml/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PiSaucer/boredhtml&amp;utm_campaign=Badge_Grade)
+  [![version](https://shields.io/github/v/release/pisaucer/boredhtml_v1)](https://github.com/PiSaucer/boredhtml_v1/releases)
+  [![license](https://badgen.net/github/license/pisaucer/boredhtml_v1)](LICENSE)
+  [![commits](https://badgen.net/github/commits/pisaucer/boredhtml_v1/)](https://github.com/PiSaucer/boredhtml_v1/commits/master)
+   ![last commit](https://badgen.net/github/last-commit/pisaucer/boredhtml_v1)
+  [![forks](https://img.shields.io/github/forks/pisaucer/boredhtml_v1.svg)](https://github.com/pisaucer/boredhtml_v1/network/members)
+  [![contributors](https://img.shields.io/github/contributors/pisaucer/boredhtml_v1)](https://github.com/pisaucer/boredhtml_v1/graphs/contributors)
+  ![size](https://img.shields.io/github/repo-size/pisaucer/boredhtml_v1?color=green)
+  [![CodeFactor](https://www.codefactor.io/repository/github/pisaucer/boredhtml_v1/badge)](https://www.codefactor.io/repository/github/pisaucer/boredhtml_v1)
+  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/61a513b5800d424c858adbae84b4a17b)](https://www.codacy.com/gh/PiSaucer/boredhtml_v1/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PiSaucer/boredhtml&amp;utm_campaign=Badge_Grade)
   ![monthly badge](https://badges.boredht.ml/bored/month.svg)
-  ![lines of code](https://badges.boredht.ml/bored/loc.svg)
+  ![lines of code](https://badges.boredht.ml/bored/v1-loc.svg)
   [![discord](https://img.shields.io/badge/Discord-7qTNdXd?logo=discord&logoColor=white&color=5865F2)](https://discord.com/invite/7qTNdXd)
 
 </div>
@@ -42,7 +42,7 @@ What I use for local hosting:
 - [vscode](https://code.visualstudio.com/download) (text editor of choice)
 - [Node.js](https://nodejs.org/en/download/) (for local testing)
 - [Chrome](https://chrome.google.com/) (web browser of choice)
-- [Firebase](https://firebase.com/) (for hosting)
+- [Netlify](https://www.netlify.com/) (for hosting)
 - [GitHub](https://desktop.github.com/) (for version control)
 
 ## How I Host Locally
