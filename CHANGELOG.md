@@ -11,6 +11,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - [Fixed] for any bug fixes.
 - [Security] in case of vulnerabilities.
 
+## [VER 1.0.1] - 2023-01-31
+### Added
+- Message at the top of the main page
+
+### Changed 
+- Change from CDN to relative links
+- Rename `Bored In School Right Now HTML` to `Bored In School Right Now HTML_v1`
+- Made the footer shorter
+
+### Removed
+- Email Links
+
 ## [VER 1.0.0] - 2023-01-27
 ### Changed 
 - Keeping this repo separate to a new version at [pisaucer/boredhtml](https://github.com/PiSaucer/boredhtml/) this project has been renamed to [PiSaucer/boredhtml_v1](https://github.com/PiSaucer/boredhtml_v1) and still accessible at [boredht.ml/v1](https://boredht.ml/v1/)
