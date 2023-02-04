@@ -12,7 +12,6 @@
   ![size](https://img.shields.io/github/repo-size/pisaucer/boredhtml_v1?color=green)
   [![CodeFactor](https://www.codefactor.io/repository/github/pisaucer/boredhtml_v1/badge)](https://www.codefactor.io/repository/github/pisaucer/boredhtml_v1)
   [![Codacy Badge](https://app.codacy.com/project/badge/Grade/61a513b5800d424c858adbae84b4a17b)](https://www.codacy.com/gh/PiSaucer/boredhtml_v1/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PiSaucer/boredhtml&amp;utm_campaign=Badge_Grade)
-  ![monthly badge](https://badges.boredht.ml/bored/month.svg)
   ![lines of code](https://badges.boredht.ml/bored/v1-loc.svg)
   [![discord](https://img.shields.io/badge/Discord-7qTNdXd?logo=discord&logoColor=white&color=5865F2)](https://discord.com/invite/7qTNdXd)
 
