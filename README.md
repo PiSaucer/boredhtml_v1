@@ -21,8 +21,9 @@
 *(Ordered in best to worst)*
 - [boredht.ml/v1/](https://boredht.ml/v1/)
 - [pisaucer.github.io/boredhtml_v1/](https://pisaucer.github.io/boredhtml_v1/)
-- [boredhtml-v1.netlify.app](https://boredhtml-v1.netlify.app/)
+- [boredhtml-v1.pisaucer.com](http://boredhtml-v1.pisaucer.com/)
 - [boredhtml-v1.pisaucer.ml](http://boredhtml-v1.pisaucer.ml/)
+- [boredhtml-v1.netlify.app](https://boredhtml-v1.netlify.app/)
 
 ## Built with
 - [Bootstrap](https://getbootstrap.com)
